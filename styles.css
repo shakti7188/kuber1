@@ -644,9 +644,9 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     filter: brightness(0.95) contrast(1.05) saturate(1.1);
 }
 
-/* Host 1 — dealer, front left */
+/* Host 1 — dealer, front, pushed more left */
 .hb-host--1 {
-    left: 20px;
+    left: 0;
     height: 520px;
     width: 280px;
     z-index: 2;
@@ -654,13 +654,14 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
-/* Host 2 — gamer, behind right — shifted out for visibility */
+/* Host 2 — gamer, behind right, cropped from right & bottom */
 .hb-host--2 {
-    right: -40px;
-    bottom: 15px;
-    height: 500px;
-    width: 300px;
+    right: 0;
+    bottom: 30px;
+    height: 480px;
+    width: 280px;
     z-index: 1;
+    clip-path: inset(0 30px 20px 0);
     mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
 }
