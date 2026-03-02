@@ -1649,6 +1649,24 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
 }
 
 /* ═══════════════════════════════════════════
+   TRUST SEALS BAR
+   ═══════════════════════════════════════════ */
+.section-trust-seals { padding:48px 0; background:linear-gradient(180deg, rgba(15,15,20,0.95) 0%, rgba(20,20,30,0.98) 100%); border-top:1px solid rgba(245,197,24,0.1); border-bottom:1px solid rgba(245,197,24,0.1); }
+.trust-seals-row { display:flex; justify-content:center; align-items:flex-start; gap:32px; flex-wrap:wrap; }
+.trust-seal { display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px; min-width:100px; max-width:130px; }
+.seal-shield { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:relative; transition:transform 0.3s, box-shadow 0.3s; }
+.seal-shield svg { width:28px; height:28px; }
+.seal-shield--gold { background:linear-gradient(135deg, rgba(245,197,24,0.15), rgba(245,197,24,0.05)); border:2px solid rgba(245,197,24,0.4); color:#f5c518; box-shadow:0 0 20px rgba(245,197,24,0.15); }
+.seal-shield--green { background:linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,200,83,0.05)); border:2px solid rgba(0,200,83,0.4); color:#00c853; box-shadow:0 0 20px rgba(0,200,83,0.15); }
+.seal-shield--blue { background:linear-gradient(135deg, rgba(41,121,255,0.15), rgba(41,121,255,0.05)); border:2px solid rgba(41,121,255,0.4); color:#2979ff; box-shadow:0 0 20px rgba(41,121,255,0.15); }
+.seal-shield--purple { background:linear-gradient(135deg, rgba(156,39,176,0.15), rgba(156,39,176,0.05)); border:2px solid rgba(156,39,176,0.4); color:#ce93d8; box-shadow:0 0 20px rgba(156,39,176,0.15); }
+.seal-shield--red { background:linear-gradient(135deg, rgba(255,59,59,0.15), rgba(255,59,59,0.05)); border:2px solid rgba(255,59,59,0.4); color:#ff3b3b; box-shadow:0 0 20px rgba(255,59,59,0.15); }
+.seal-shield--cyan { background:linear-gradient(135deg, rgba(0,229,255,0.15), rgba(0,229,255,0.05)); border:2px solid rgba(0,229,255,0.4); color:#00e5ff; box-shadow:0 0 20px rgba(0,229,255,0.15); }
+.seal-shield:hover { transform:translateY(-4px) scale(1.08); box-shadow:0 0 30px currentColor; }
+.seal-label { font-size:0.82rem; font-weight:700; color:var(--text-primary); letter-spacing:0.5px; line-height:1.2; }
+.seal-sub { font-size:0.68rem; color:var(--text-secondary); line-height:1.2; opacity:0.7; }
+
+/* ═══════════════════════════════════════════
    RESPONSIVE — TABLET
    ═══════════════════════════════════════════ */
 @media (max-width:1024px) {
@@ -1742,6 +1760,14 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     .provider-name { font-size:0.8rem; }
     .trending-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
     .trending-img { height:120px; }
+    /* Trust seals mobile */
+    .section-trust-seals { padding:32px 0; }
+    .trust-seals-row { gap:20px; }
+    .trust-seal { min-width:80px; max-width:100px; }
+    .seal-shield { width:46px; height:46px; }
+    .seal-shield svg { width:22px; height:22px; }
+    .seal-label { font-size:0.72rem; }
+    .seal-sub { font-size:0.6rem; }
 }
 
 @media (max-width:400px) {
