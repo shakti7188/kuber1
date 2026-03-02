@@ -628,22 +628,13 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     align-self: flex-end;
 }
 .hb-hosts {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 16px;
+    position: relative;
     height: 550px;
 }
 .hb-host {
+    position: absolute;
+    bottom: 0;
     overflow: hidden;
-    border-radius: 12px;
-    border: 2px solid rgba(245,197,24,0.2);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 20px rgba(245,197,24,0.08);
-    transition: transform 0.4s, box-shadow 0.4s;
-}
-.hb-host:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 50px rgba(0,0,0,0.6), 0 0 30px rgba(245,197,24,0.15);
 }
 .hb-host img {
     height: 100%;
@@ -653,18 +644,25 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     filter: brightness(0.95) contrast(1.05) saturate(1.1);
 }
 
-/* Host 1 — dealer, left */
+/* Host 1 — dealer, front left */
 .hb-host--1 {
+    left: 20px;
     height: 520px;
     width: 280px;
     z-index: 2;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
-/* Host 2 — gamer, right */
+/* Host 2 — gamer, behind right — shifted out for visibility */
 .hb-host--2 {
+    right: -40px;
+    bottom: 15px;
     height: 500px;
-    width: 270px;
+    width: 300px;
     z-index: 1;
+    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
 }
 
 .hb-host-glow {
@@ -1700,9 +1698,9 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     .hb-content { flex-direction:column; text-align:center; padding:90px 20px 30px; min-height:auto; }
     .hb-left { padding-right:0; }
     .hb-right { width:100%; order:-1; }
-    .hb-hosts { height:350px; gap:12px; }
-    .hb-host--1 { height:340px; width:200px; }
-    .hb-host--2 { height:320px; width:190px; }
+    .hb-hosts { height:350px; display:flex; justify-content:center; }
+    .hb-host--1 { position:relative; left:auto; height:340px; width:200px; }
+    .hb-host--2 { height:300px; width:200px; right:-10px; }
     .hb-cta-row { justify-content:center; }
     .hb-game-cards { justify-content:center; }
     .hb-brand-inner { font-size:clamp(2.2rem,6vw,4rem); }
@@ -1736,9 +1734,9 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     /* Hero mobile */
     .hero-banner { min-height:auto; }
     .hb-content { padding:80px 16px 24px; gap:16px; }
-    .hb-hosts { height:280px; gap:10px; }
+    .hb-hosts { height:280px; }
     .hb-host--1 { height:270px; width:160px; }
-    .hb-host--2 { height:260px; width:150px; }
+    .hb-host--2 { height:250px; width:160px; }
     .hb-intro-text { font-size:0.85rem; letter-spacing:0.15em; }
     .hb-brand-inner { font-size:2.2rem; }
     .hb-brand-border { padding:10px 20px 8px; }
@@ -1799,9 +1797,9 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
 
 @media (max-width:400px) {
     .game-grid { grid-template-columns:1fr; }
-    .hb-hosts { height:220px; gap:8px; }
+    .hb-hosts { height:220px; }
     .hb-host--1 { height:210px; width:130px; }
-    .hb-host--2 { height:200px; width:120px; }
+    .hb-host--2 { height:200px; width:130px; }
     .hb-brand-inner { font-size:1.8rem; }
     .hb-game-thumb { width:100px; height:68px; }
     /* New sections — small mobile */
