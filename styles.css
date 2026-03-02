@@ -201,8 +201,8 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
 }
 .header--scrolled { padding:8px 0; background:rgba(10,12,20,0.95); }
 .header-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-.logo { font-size:1.5rem; font-weight:900; letter-spacing:0.5px; flex-shrink:0; }
-.logo-gold { color:var(--accent-gold); }
+.logo { flex-shrink:0; }
+.logo-img { height:40px; width:auto; display:block; }
 .header-nav { display:flex; gap:24px; }
 .nav-link { font-size:0.88rem; font-weight:600; color:var(--text-secondary); transition:color var(--transition); }
 .nav-link:hover { color:var(--accent-gold); }
