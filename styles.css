@@ -630,6 +630,8 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
 .hb-hosts {
     position: relative;
     height: 550px;
+    display: flex;
+    justify-content: center;
 }
 .hb-host {
     position: absolute;
@@ -644,26 +646,26 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     filter: brightness(0.95) contrast(1.05) saturate(1.1);
 }
 
-/* Host 1 — dealer, front, pushed more left */
+/* Host 1 — dealer, single hero image, centered & wide with edge blend */
 .hb-host--1 {
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 520px;
-    width: 280px;
+    width: 420px;
     z-index: 2;
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image:
+        linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+        linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+        linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-composite: source-in;
 }
 
-/* Host 2 — gamer, behind right, cropped from right & bottom */
+/* Host 2 — hidden (single image layout) */
 .hb-host--2 {
-    right: 0;
-    bottom: 30px;
-    height: 480px;
-    width: 280px;
-    z-index: 1;
-    clip-path: inset(0 30px 20px 0);
-    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    display: none;
 }
 
 .hb-host-glow {
@@ -1699,9 +1701,9 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     .hb-content { flex-direction:column; text-align:center; padding:90px 20px 30px; min-height:auto; }
     .hb-left { padding-right:0; }
     .hb-right { width:100%; order:-1; }
-    .hb-hosts { height:350px; display:flex; justify-content:center; }
-    .hb-host--1 { position:relative; left:auto; height:340px; width:200px; }
-    .hb-host--2 { height:300px; width:200px; right:-10px; }
+    .hb-hosts { height:350px; }
+    .hb-host--1 { height:340px; width:300px; }
+    .hb-host--2 { display:none; }
     .hb-cta-row { justify-content:center; }
     .hb-game-cards { justify-content:center; }
     .hb-brand-inner { font-size:clamp(2.2rem,6vw,4rem); }
@@ -1736,8 +1738,8 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
     .hero-banner { min-height:auto; }
     .hb-content { padding:80px 16px 24px; gap:16px; }
     .hb-hosts { height:280px; }
-    .hb-host--1 { height:270px; width:160px; }
-    .hb-host--2 { height:250px; width:160px; }
+    .hb-host--1 { height:270px; width:240px; }
+    .hb-host--2 { display:none; }
     .hb-intro-text { font-size:0.85rem; letter-spacing:0.15em; }
     .hb-brand-inner { font-size:2.2rem; }
     .hb-brand-border { padding:10px 20px 8px; }
@@ -1799,8 +1801,8 @@ h1,h2,h3,h4 { color:var(--text-primary); font-weight:800; line-height:1.12; }
 @media (max-width:400px) {
     .game-grid { grid-template-columns:1fr; }
     .hb-hosts { height:220px; }
-    .hb-host--1 { height:210px; width:130px; }
-    .hb-host--2 { height:200px; width:130px; }
+    .hb-host--1 { height:210px; width:200px; }
+    .hb-host--2 { display:none; }
     .hb-brand-inner { font-size:1.8rem; }
     .hb-game-thumb { width:100px; height:68px; }
     /* New sections — small mobile */
