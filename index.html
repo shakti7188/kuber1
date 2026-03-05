@@ -28,25 +28,37 @@
                 <img src="logo.png" alt="Kubercric" class="logo-img">
             </div>
             <nav class="header-nav">
-                <a href="#games" class="nav-link">Games</a>
-                <a href="#cricket" class="nav-link">Cricket</a>
-                <a href="#casino" class="nav-link">Casino</a>
-                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#paths" class="nav-link" data-i18n="nav_how">How It Works</a>
+                <a href="#limited-offer" class="nav-link" data-i18n="nav_offers">Offers</a>
+                <a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a>
             </nav>
+            <!-- Language Selector -->
+            <div class="lang-selector" id="langSelector">
+                <button class="lang-btn" id="langBtn" aria-label="Change Language">
+                    <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
+                    </svg>
+                    <span class="lang-current" id="langCurrent">EN</span>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="lang-option lang-option--active" data-lang="en">English</button>
+                    <button class="lang-option" data-lang="hi">हिन्दी</button>
+                    <button class="lang-option" data-lang="ta">தமிழ்</button>
+                    <button class="lang-option" data-lang="te">తెలుగు</button>
+                    <button class="lang-option" data-lang="bn">বাংলা</button>
+                    <button class="lang-option" data-lang="mr">मराठी</button>
+                    <button class="lang-option" data-lang="gu">ગુજરાતી</button>
+                    <button class="lang-option" data-lang="kn">ಕನ್ನಡ</button>
+                    <button class="lang-option" data-lang="ml">മലయാളം</button>
+                    <button class="lang-option" data-lang="pa">ਪੰਜਾਬੀ</button>
+                </div>
+            </div>
             <a href="https://wa.me/1234567890" class="btn btn-gold btn-sm header-cta">
                 <span class="btn-sparkle"></span>
-                Get ID Now
+                <span data-i18n="header_cta">Get Free ID</span>
             </a>
         </div>
     </header>
-
-    <!-- FLOATING WHATSAPP (Desktop) -->
-    <a href="https://wa.me/1234567890" target="_blank" class="floating-wa" aria-label="Chat on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-            <path
-                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-        </svg>
-    </a>
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- HERO BANNER — MAHAKAL-STYLE FULL WIDTH       -->
@@ -110,7 +122,15 @@
 
             <!-- LEFT SIDE — Branding + CTA -->
             <div class="hb-left">
-                <div class="hb-intro-text">INTRODUCING</div>
+
+                <!-- LIVE PLAYERS BADGE -->
+                <div class="hb-live-badge">
+                    <span class="live-dot"></span>
+                    <strong>12,400+</strong> <span data-i18n="players_online">Players Online Right Now</span>
+                </div>
+
+                <!-- INTRODUCING TEXT -->
+                <div class="hb-intro-text" data-i18n="introducing">Introducing .....</div>
 
                 <!-- BRAND MARQUEE -->
                 <div class="hb-brand">
@@ -118,7 +138,7 @@
                         <div class="hb-brand-inner">
                             <span class="hb-brand-kuber">KUBER</span><span class="hb-brand-cric">CRIC</span>
                         </div>
-                        <div class="hb-brand-tagline">INDIA'S #1 BETTING PLATFORM </div>
+                        <div class="hb-brand-tagline">INDIA'S #1 BETTING PLATFORM</div>
                         <!-- Marquee lights -->
                         <div class="marquee-lights">
                             <span></span><span></span><span></span><span></span><span></span>
@@ -129,18 +149,37 @@
                     </div>
                 </div>
 
-                <p class="hb-desc">3000+ Live Games &middot; 7+ Exchanges &middot; Instant Withdrawals</p>
+                <p class="hb-desc" data-i18n="desc_hero">3000+ Live Games &middot; 7+ Exchanges &middot; Instant Withdrawals</p>
 
+                <!-- DUAL CTA — Register + WhatsApp -->
                 <div class="hb-cta-row">
-                    <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">
-                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                            fill="currentColor">
-                            <path
-                                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z" />
+                    <a href="https://kubercric.com" class="btn btn-gold btn-lg btn-glow" target="_blank">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                         </svg>
-                        Get Your ID Now
+                        <span data-i18n="register_id">Get Free ID Online</span>
                     </a>
-                    <a href="#how-it-works" class="btn btn-glass btn-lg">How It Works</a>
+                    <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z"/>
+                        </svg>
+                        <span data-i18n="get_id_wa">Get Free ID on WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- URGENCY BAR -->
+                <div class="hb-urgency-bar" style="margin-bottom: 52px;">
+                    <span>&#128293; <strong>1,084</strong> players claimed their bonus today</span>
+                    <span>&#9203; Limited-time bonus active now</span>
+                </div>
+
+                <!-- GAME CATEGORIES -->
+                <div class="hb-game-cats">
+                    <span class="hb-cat"><span class="hb-cat-icon">🏏</span> Live Cricket</span>
+                    <span class="hb-cat"><span class="hb-cat-icon">🎰</span> Live Casino</span>
+                    <span class="hb-cat"><span class="hb-cat-icon">🃏</span> Teen Patti</span>
+                    <span class="hb-cat"><span class="hb-cat-icon">🚀</span> Crash Games</span>
+                    <span class="hb-cat"><span class="hb-cat-icon">📊</span> Khadda Market</span>
                 </div>
 
             </div>
@@ -165,12 +204,230 @@
         <!-- Trust Strip -->
         <div class="hb-trust-bar">
             <div class="hb-trust-inner">
-                <div class="trust-item"><span class="trust-icon">&#9889;</span> Instant IDs</div>
-                <div class="trust-item"><span class="trust-icon">&#128274;</span> Verified</div>
-                <div class="trust-item"><span class="trust-icon">&#128176;</span> Fast Payouts</div>
-                <div class="trust-item"><span class="trust-icon">&#127760;</span> Hindi &amp; English</div>
-                <div class="trust-item"><span class="trust-icon">&#128241;</span> Mobile Ready</div>
-                <div class="trust-item"><span class="trust-icon">&#127942;</span> 10% Bonus</div>
+                <div class="trust-item"><span class="trust-icon">&#9889;</span> <span data-i18n="trust_bar_ids">Instant IDs</span></div>
+                <div class="trust-item"><span class="trust-icon">&#128274;</span> <span data-i18n="trust_bar_upgrade">Kubercric Upgrade</span></div>
+                <div class="trust-item"><span class="trust-icon">&#128172;</span> <span data-i18n="trust_bar_support">1-to-1 Support</span></div>
+                <div class="trust-item"><span class="trust-icon">&#128176;</span> <span data-i18n="trust_bar_withdrawal">24/7 Instant Withdrawal</span></div>
+                <div class="trust-item"><span class="trust-icon">&#127942;</span> <span data-i18n="trust_bar_bonus">10% Bonus</span></div>
+                <div class="trust-item"><span class="trust-icon">&#128241;</span> <span data-i18n="trust_bar_mobile">Mobile Ready</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SOCIAL PROOF TICKER                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="social-proof-ticker" id="socialTicker">
+        <div class="ticker-inner">
+            <span class="ticker-dot"></span>
+            <span class="ticker-text" id="tickerText">Rahul from Delhi just withdrew &#8377;12,500</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- WHY PLAYERS TRUST US — Section 2             -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="trust-strip" id="trust-strip">
+        <div class="container">
+
+            <!-- Headline -->
+            <div class="ts-header">
+                <h2 class="ts-title" data-i18n="why_trust">Why <span class="text-gradient-gold">50,000+ Players</span> Trust Us</h2>
+                <p class="ts-subtitle" data-i18n="ts_subtitle">Licensed, verified, and built for serious players who demand transparency.</p>
+            </div>
+
+            <!-- CGA Seal Centerpiece + Trust Points -->
+            <div class="ts-main">
+                <!-- Left trust points -->
+                <div class="ts-points ts-points--left">
+                    <div class="ts-point">
+                        <div class="ts-point-icon ts-point--green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1.5"/></svg>
+                        </div>
+                        <div class="ts-point-text">
+                            <strong data-i18n="ts_ssl">256-bit SSL Encryption</strong>
+                            <span data-i18n="ts_ssl_desc">Bank-grade security on every transaction</span>
+                        </div>
+                    </div>
+                    <div class="ts-point">
+                        <div class="ts-point-icon ts-point--blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M3.6 15h1.8M18.6 15h1.8M3.6 9h1.8M18.6 9h1.8"/></svg>
+                        </div>
+                        <div class="ts-point-text">
+                            <strong data-i18n="ts_rng">RNG Certified Games</strong>
+                            <span data-i18n="ts_rng_desc">Fair play guaranteed by independent audits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center: CGA Seal -->
+                <div class="ts-seal-center">
+                    <div class="ts-seal-glow"></div>
+                    <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" class="ts-cga-svg">
+                        <path d="M60 2 L112 22 L112 70 C112 100 90 128 60 138 C30 128 8 100 8 70 L8 22 Z" fill="#395173" stroke="#4a6a8f" stroke-width="2"/>
+                        <path d="M60 10 L104 27 L104 70 C104 95 85 120 60 130 C35 120 16 95 16 70 L16 27 Z" fill="#2a3f5c" stroke="#4a6a8f" stroke-width="1"/>
+                        <circle cx="60" cy="62" r="32" fill="none" stroke="#f5c518" stroke-width="2.5"/>
+                        <circle cx="60" cy="62" r="28" fill="none" stroke="#d4a817" stroke-width="0.8"/>
+                        <text x="60" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#f5c518" letter-spacing="3">CGA</text>
+                        <text x="60" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#8fa8c8" letter-spacing="1.5">CURAÇAO</text>
+                        <polygon points="60,22 62,28 68,28 63,32 65,38 60,34 55,38 57,32 52,28 58,28" fill="#f5c518"/>
+                        <circle cx="60" cy="100" r="10" fill="#00c853" opacity="0.9"/>
+                        <path d="M55 100 L58 103 L66 95" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="22" y="112" width="76" height="14" rx="3" fill="#f5c518" opacity="0.9"/>
+                        <text x="60" y="122" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" font-weight="bold" fill="#1a1a2e" letter-spacing="0.8">LICENSED</text>
+                    </svg>
+                    <span class="ts-seal-label">Curaçao eGaming Authority</span>
+                    <span class="ts-seal-sub" data-i18n="seal_sub">Internationally Recognized License</span>
+                </div>
+
+                <!-- Right trust points -->
+                <div class="ts-points ts-points--right">
+                    <div class="ts-point">
+                        <div class="ts-point-icon ts-point--red">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/><text x="12" y="15" text-anchor="middle" font-size="8" font-weight="bold" fill="currentColor" stroke="none">18+</text></svg>
+                        </div>
+                        <div class="ts-point-text">
+                            <strong data-i18n="ts_responsible">Responsible Gaming</strong>
+                            <span data-i18n="ts_responsible_desc">Age-verified, self-exclusion tools available</span>
+                        </div>
+                    </div>
+                    <div class="ts-point">
+                        <div class="ts-point-icon ts-point--cyan">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="ts-point-text">
+                            <strong data-i18n="ts_anonymous">Anonymous ID System</strong>
+                            <span data-i18n="ts_anonymous_desc">Minimal info needed, privacy first approach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="ts-divider"></div>
+
+            <!-- Payment Methods -->
+            <div class="ts-payments">
+                <span class="ts-pay-label" data-i18n="pay_label">Deposit &amp; Withdraw Instantly Via</span>
+                <div class="ts-pay-icons">
+                    <span class="ts-pay">UPI</span>
+                    <span class="ts-pay">GPay</span>
+                    <span class="ts-pay">PhonePe</span>
+                    <span class="ts-pay">Paytm</span>
+                    <span class="ts-pay">Bank Transfer</span>
+                    <span class="ts-pay">Debit / Credit Card</span>
+                    <span class="ts-pay">Crypto</span>
+                </div>
+            </div>
+
+            <!-- GET YOUR FREE ID CTA -->
+            <div class="ts-cta-block">
+                <h3 class="ts-cta-title">Get Your Free Betting ID Now</h3>
+                <div class="ts-cta-row">
+                    <a href="javascript:void(0)" class="btn btn-wa btn-lg btn-pulse btn-glow" data-track="cta_whatsapp_click" data-label="trust-cta">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z"/></svg>
+                        Get Free ID on WhatsApp
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-gold btn-lg btn-glow" data-track="cta_signup_click" data-label="trust-cta">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        Create Free ID Online
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CHOOSE YOUR PATH                            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section section-paths" id="paths">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="choose_path">How to Get Your <span class="text-gradient-gold">Betting ID</span></h2>
+                <p class="section-subtitle" data-i18n="choose_path_desc">Two ways to get started. Pick what works for you.</p>
+            </div>
+
+            <div class="paths-grid">
+                <!-- Path 1: Sign Up -->
+                <div class="path-card glass-panel">
+                    <div class="path-icon path-icon--signup">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+                    </div>
+                    <span class="path-tag" data-i18n="path_self_service">Self Service</span>
+                    <h3 data-i18n="path_signup">Sign Up Yourself</h3>
+                    <ul class="path-features">
+                        <li>&#10003; <span data-i18n="path_feat_form">Fill a quick form (under 2 min)</span></li>
+                        <li>&#10003; <span data-i18n="path_feat_username">Choose your own username</span></li>
+                        <li>&#10003; <span data-i18n="path_feat_referral">Referral code is pre-filled for you</span></li>
+                        <li>&#10003; <span data-i18n="path_feat_deposit">Deposit &amp; start playing instantly</span></li>
+                    </ul>
+                    <p class="path-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> <span data-i18n="path_ready">Ready instantly</span></p>
+                    <a href="javascript:void(0)" class="btn btn-gold btn-md btn-block" data-track="cta_signup_click" data-label="path-card" data-i18n="path_register">Get Free ID Online</a>
+                </div>
+
+                <!-- Path 2: WhatsApp -->
+                <div class="path-card glass-panel path-card--wa">
+                    <div class="path-popular" data-i18n="path_popular">Most Popular</div>
+                    <div class="path-icon path-icon--wa">
+                        <svg viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    </div>
+                    <span class="path-tag path-tag--wa" data-i18n="path_zero_effort">Zero Effort</span>
+                    <h3 data-i18n="path_wa_title">WhatsApp Support</h3>
+                    <ul class="path-features">
+                        <li>&#10003; <span data-i18n="path_wa_feat_msg">Just send us a message</span></li>
+                        <li>&#10003; <span data-i18n="path_wa_feat_create">We create your ID for you</span></li>
+                        <li>&#10003; <span data-i18n="path_wa_feat_noform">No form, no signup code needed</span></li>
+                        <li>&#10003; <span data-i18n="path_wa_feat_login">Login details sent to you</span></li>
+                    </ul>
+                    <p class="path-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Ready in 2 minutes</p>
+                    <a href="javascript:void(0)" class="btn btn-wa btn-md btn-block" data-track="cta_whatsapp_click" data-label="path-card" data-i18n="path_get_id_wa">Get Free ID on WhatsApp &#10148;</a>
+                </div>
+            </div>
+
+            <!-- Animated Steps Flow -->
+            <div class="path-steps-flow">
+                <div class="path-steps-track">
+                    <div class="steps-progress-line">
+                        <div class="steps-progress-fill" id="stepsProgressFill"></div>
+                    </div>
+                    <div class="path-step-block" data-step="1">
+                        <div class="path-step-circle">
+                            <span class="path-step-num-label">1</span>
+                        </div>
+                        <div class="path-step-info">
+                            <h4>Message or Sign Up</h4>
+                            <p>WhatsApp "Hi" or register on kubercric.com</p>
+                        </div>
+                    </div>
+                    <div class="path-step-block" data-step="2">
+                        <div class="path-step-circle">
+                            <span class="path-step-num-label">2</span>
+                        </div>
+                        <div class="path-step-info">
+                            <h4>Get Your Betting ID</h4>
+                            <p>Instant ID with login credentials on WhatsApp</p>
+                        </div>
+                    </div>
+                    <div class="path-step-block" data-step="3">
+                        <div class="path-step-circle">
+                            <span class="path-step-num-label">3</span>
+                        </div>
+                        <div class="path-step-info">
+                            <h4>Deposit via UPI</h4>
+                            <p>GPay, PhonePe, Paytm — instant deposits</p>
+                        </div>
+                    </div>
+                    <div class="path-step-block" data-step="4">
+                        <div class="path-step-circle">
+                            <span class="path-step-num-label">4</span>
+                        </div>
+                        <div class="path-step-info">
+                            <h4>Start Playing &amp; Winning!</h4>
+                            <p>3,000+ games unlocked instantly</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -182,14 +439,17 @@
         <div class="offer-bg-pulse"></div>
         <div class="container">
             <div class="countdown-banner glass-panel">
+                <div class="countdown-badge" data-i18n="countdown_badge">&#128293; LIMITED TIME OFFER</div>
+                <!-- Offer Banner Image -->
+                <div class="offer-banner-img">
+                    <img src="images/site/offer1.jpeg" alt="Get 50 Free Spins & 10% Bonus on Live Casino" loading="lazy" style="width:100%; border-radius:var(--radius-lg);">
+                </div>
                 <div class="countdown-left">
-                    <div class="countdown-badge">&#128293; LIMITED TIME OFFER</div>
-                    <h2 class="countdown-title">Get <span class="text-gradient-gold">50 Free Spins</span> &amp; 10% Bonus on Live Casino</h2>
-                    <p class="countdown-desc">Claim your free spins in Live Casino &mdash; Evoplay &amp; Egypt Gods. Rolling 25x, max bonus &#8377;1,500. Plus get 2% bonus via Grey Gaming!</p>
                     <div class="countdown-features">
                         <span class="cf-item">&#10003; 50 Free Spins</span>
-                        <span class="cf-item">&#10003; 10% Live Casino Bonus</span>
-                        <span class="cf-item">&#10003; Max Bonus &#8377;1,500</span>
+                        <span class="cf-item">&#10003; 10% Casino Bonus</span>
+                        <span class="cf-item">&#10003; 2% New ID Bonus</span>
+                        <span class="cf-item">&#10003; Rolling - 25x</span>
                     </div>
                     <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">
                         <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
@@ -197,31 +457,31 @@
                             <path
                                 d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z" />
                         </svg>
-                        Claim Bonus Before It Expires
+                        <span data-i18n="claim_bonus">Claim Bonus Before It Expires</span>
                     </a>
-                    <p class="offer-disclaimer">New customers only. 18+. T&amp;Cs apply. Play responsibly.</p>
+                    <p class="offer-disclaimer" data-i18n="offer_disclaimer">New customers only. 18+. T&amp;Cs apply. Play responsibly.</p>
                 </div>
                 <div class="countdown-right">
-                    <div class="countdown-label">OFFER EXPIRES IN</div>
+                    <div class="countdown-label" data-i18n="offer_expires">OFFER EXPIRES IN</div>
                     <div class="countdown-timer" id="countdownTimer">
                         <div class="timer-block">
                             <span class="timer-value" id="timerHours">02</span>
-                            <span class="timer-unit">HRS</span>
+                            <span class="timer-unit" data-i18n="timer_hrs">HRS</span>
                         </div>
                         <span class="timer-sep">:</span>
                         <div class="timer-block">
                             <span class="timer-value" id="timerMins">00</span>
-                            <span class="timer-unit">MIN</span>
+                            <span class="timer-unit" data-i18n="timer_min">MIN</span>
                         </div>
                         <span class="timer-sep">:</span>
                         <div class="timer-block">
                             <span class="timer-value" id="timerSecs">00</span>
-                            <span class="timer-unit">SEC</span>
+                            <span class="timer-unit" data-i18n="timer_sec">SEC</span>
                         </div>
                     </div>
                     <div class="countdown-urgency">
                         <span class="urgency-dot"></span>
-                        <span id="claimCount">847</span> players claimed today
+                        <span id="claimCount">847</span> <span data-i18n="claimed_today">players claimed today</span>
                     </div>
                 </div>
             </div>
@@ -229,13 +489,61 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
+    <!-- HOW TO VIDEO                                    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section section-how-video" id="how-video">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How it <span class="text-gradient-gold">Works</span></h2>
+                <p class="section-subtitle">Watch this quick guide — it takes just 60 seconds.</p>
+            </div>
+            <div class="how-video-wrap">
+                <div class="how-video-frame">
+                    <div class="video-container" id="howToVideoContainer">
+                        <img src="images/hero_bg.png" alt="How to get started with Kubercric" class="video-poster" id="videoPoster">
+                        <div class="video-play-btn" id="videoPlayBtn">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="38" fill="rgba(0,0,0,0.6)" stroke="#F5C518" stroke-width="3"/>
+                                <polygon points="32,24 58,40 32,56" fill="#F5C518"/>
+                            </svg>
+                            <span class="video-play-text">Watch How It Works</span>
+                        </div>
+                        <video id="howToVideo" preload="none" playsinline style="display:none;width:100%;height:100%;object-fit:cover;border-radius:16px;">
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="how-video-bottom">
+                <p class="how-video-desc">Just WhatsApp us, get your ID in under 60 seconds, deposit via UPI &amp; start playing 3,000+ live games instantly.</p>
+                <div class="how-video-cta-row">
+                    <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z"/>
+                        </svg>
+                        Get Free ID on WhatsApp
+                    </a>
+                    <a href="https://kubercric.com" class="btn btn-gold btn-lg btn-glow" target="_blank">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        Create Free ID Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- (Get Your ID in 60 Seconds section removed) -->
+
+    <!-- ═══════════════════════════════════════════ -->
     <!-- OUR GAME PROVIDERS — SINGLE MARQUEE           -->
     <!-- ═══════════════════════════════════════════ -->
     <section class="section section-providers" id="providers">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Powered by <span class="text-gradient-gold">World-Class Providers</span></h2>
-                <p class="section-subtitle">50+ premium providers &mdash; one single ID gives you access to all.</p>
+                <h2 class="section-title" data-i18n="providers_title">Powered by <span class="text-gradient-gold">World-Class Providers</span></h2>
+                <p class="section-subtitle" data-i18n="providers_desc">One single Kubercric ID unlocks access to 50+ premium game providers. No re-registration needed.</p>
             </div>
         </div>
 
@@ -279,145 +587,13 @@
 
         <div class="container">
             <div class="section-cta">
-                <a href="https://wa.me/1234567890" class="btn btn-gold btn-lg btn-glow">Get Access to All Providers</a>
-                <p class="microcopy">One single ID &middot; All platforms &middot; Instant activation</p>
+                <a href="https://wa.me/1234567890" class="btn btn-gold btn-lg btn-glow" data-i18n="providers_cta">Get Access to All Providers</a>
+                <p class="microcopy" data-i18n="providers_microcopy">One single ID &middot; All platforms &middot; Instant activation</p>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- TRENDING GAMES                               -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="section section-trending" id="trending">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">&#128293; Trending Games <span class="text-gradient-gold">Right Now</span>
-                </h2>
-                <p class="section-subtitle">The most played games on Kubercric this week. Join thousands of active
-                    players.</p>
-            </div>
-
-            <div class="trending-grid">
-                <div class="trending-card glass-panel" data-hot="true">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=300&q=75" alt="Aviator"
-                            loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-hot">&#128293; #1 TRENDING</span>
-                        <span class="trending-players"><span class="live-dot"></span>12.4K playing</span>
-                    </div>
-                    <h4>Aviator</h4>
-                    <p>Crash Game</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1541278107931-e006523892df?w=300&q=75"
-                            alt="Teen Patti" loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>9.8K playing</span>
-                    </div>
-                    <h4>Teen Patti Live</h4>
-                    <p>Card Game</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=300&q=75"
-                            alt="IPL Betting" loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-hot">&#127951; IPL LIVE</span>
-                        <span class="trending-players"><span class="live-dot"></span>28K playing</span>
-                    </div>
-                    <h4>Cricket Exchange</h4>
-                    <p>Live IPL T20</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=300&q=75"
-                            alt="Lightning Roulette" loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>6.2K playing</span>
-                    </div>
-                    <h4>Lightning Roulette</h4>
-                    <p>Live Casino</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=300&q=75"
-                            alt="Dragon Tiger" loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>7.1K playing</span>
-                    </div>
-                    <h4>Dragon Tiger</h4>
-                    <p>Card Game</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&q=75"
-                            alt="Andar Bahar" loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>5.5K playing</span>
-                    </div>
-                    <h4>Andar Bahar</h4>
-                    <p>Card Game</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&q=75" alt="Crazy Time"
-                            loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>4.9K playing</span>
-                    </div>
-                    <h4>Crazy Time</h4>
-                    <p>Game Show</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&q=75" alt="Lucky 7"
-                            loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>3.8K playing</span>
-                    </div>
-                    <h4>Lucky 7</h4>
-                    <p>Card Game</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=300&q=75" alt="Mines"
-                            loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>4.3K playing</span>
-                    </div>
-                    <h4>Mines</h4>
-                    <p>Instant Win</p>
-                </div>
-
-                <div class="trending-card glass-panel">
-                    <div class="trending-img">
-                        <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=300&q=75"
-                            alt="Sweet Bonanza" loading="lazy">
-                        <div class="trending-overlay"></div>
-                        <span class="trending-players"><span class="live-dot"></span>3.2K playing</span>
-                    </div>
-                    <h4>Sweet Bonanza</h4>
-                    <p>Slots</p>
-                </div>
-            </div>
-
-            <div class="section-cta">
-                <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">Play Trending Games
-                    Now</a>
-                <p class="microcopy">3000+ games available &middot; New games added daily</p>
-            </div>
-        </div>
-    </section>
+    <!-- (Trending Games section removed) -->
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- GAME CATEGORY GRID                           -->
@@ -425,117 +601,166 @@
     <section class="section section-games" id="games">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Everything You Love to Play <span class="text-gradient-gold">&mdash; All in
+                <h2 class="section-title" data-i18n="games_title">Everything You Love to Play <span class="text-gradient-gold">&mdash; All in
                         One Place</span></h2>
-                <p class="section-subtitle">From live IPL action to real-dealer tables &mdash; pick your game and start
+                <p class="section-subtitle" data-i18n="games_subtitle">From live IPL action to real-dealer tables &mdash; pick your game and start
                     winning.</p>
             </div>
 
             <div class="game-grid">
                 <div class="game-card" data-color="green">
                     <div class="game-card-bg">
-                        <img src="https://kubercric.com/assets/images/sports.png" alt="Sports"
-                            loading="lazy">
+                        <img src="images/site/194309.png" alt="Ball By Ball" loading="lazy">
                     </div>
                     <div class="game-card-content">
-                        <div class="game-card-icon">&#127951;</div>
+                        <div class="game-card-icon">🏏</div>
                         <h3 class="game-card-title">Cricket &amp; Sports</h3>
-                        <p class="game-card-desc">Live IPL, T20 &amp; ODIs with real-time odds. Ball-by-ball markets.
-                        </p>
+                        <p class="game-card-desc">Live IPL, T20 &amp; ODIs with real-time odds. Ball-by-ball markets.</p>
                         <span class="game-card-tag">50+ markets per match</span>
                     </div>
                 </div>
 
                 <div class="game-card" data-color="red">
                     <div class="game-card-bg">
-                        <img src="https://kubercric.com/assets/images/live-casino.png" alt="Ace Casino"
-                            loading="lazy">
+                        <img src="images/site/798028.png" alt="Teen Patti 20-20" loading="lazy">
                     </div>
                     <div class="game-card-content">
-                        <div class="game-card-icon">&#127920;</div>
-                        <h3 class="game-card-title">Ace Casino</h3>
-                        <p class="game-card-desc">SuperSpade, Supernowa, Royal Gaming &amp; more. Indian casino live.</p>
-                        <span class="game-card-tag">Teen Patti, Andar Bahar, Dragon Tiger</span>
+                        <div class="game-card-icon">🎴</div>
+                        <h3 class="game-card-title">Indian Casino</h3>
+                        <p class="game-card-desc">Teen Patti, Andar Bahar, Dragon Tiger &mdash; Hindi dealers available.</p>
+                        <span class="game-card-tag">SuperSpade &middot; Vivo Gaming</span>
                     </div>
                 </div>
 
                 <div class="game-card" data-color="purple">
                     <div class="game-card-bg">
-                        <img src="https://kubercric.com/assets/images/ice-casino.png" alt="Live Casino"
-                            loading="lazy">
+                        <img src="images/site/475793.png" alt="Blackjack VIP" loading="lazy">
                     </div>
                     <div class="game-card-content">
-                        <div class="game-card-icon">&#127183;</div>
+                        <div class="game-card-icon">🃏</div>
                         <h3 class="game-card-title">Live Casino</h3>
-                        <p class="game-card-desc">Evolution, Ezugi, Pragmatic Live &mdash; real dealers 24/7.</p>
+                        <p class="game-card-desc">Evolution, Ezugi &mdash; real dealers streaming 24/7 in HD.</p>
                         <span class="game-card-tag">Roulette, Blackjack, Baccarat</span>
                     </div>
                 </div>
 
                 <div class="game-card" data-color="orange">
                     <div class="game-card-bg">
-                        <img src="https://kubercric.com/assets/images/slot-game.png" alt="Slot Games"
-                            loading="lazy">
+                        <img src="images/site/833.png" alt="Sugar Ride" loading="lazy">
                     </div>
                     <div class="game-card-content">
-                        <div class="game-card-icon">&#127922;</div>
+                        <div class="game-card-icon">🎰</div>
                         <h3 class="game-card-title">Slots &amp; Bingo</h3>
-                        <p class="game-card-desc">Jili, Tomhorn, Bgaming, Evoplay &mdash; premium slots.</p>
-                        <span class="game-card-tag">Top providers</span>
-                    </div>
-                </div>
-
-                <div class="game-card" data-color="blue">
-                    <div class="game-card-bg">
-                        <img src="https://kubercric.com/assets/images/special-market.png" alt="Special Market"
-                            loading="lazy">
-                    </div>
-                    <div class="game-card-content">
-                        <div class="game-card-icon">&#128640;</div>
-                        <h3 class="game-card-title">Special Market</h3>
-                        <p class="game-card-desc">Unique betting markets &amp; tournaments. Fast results.</p>
-                        <span class="game-card-tag">Exclusive markets</span>
+                        <p class="game-card-desc">Fortune Love, Sugar Ride, JILI &amp; Evoplay &mdash; 50+ providers.</p>
+                        <span class="game-card-tag">50 Free Spins on signup</span>
                     </div>
                 </div>
 
                 <div class="game-card" data-color="cyan">
                     <div class="game-card-bg">
-                        <img src="https://kubercric.com/assets/images/bingo.png" alt="Virtual Sports"
-                            loading="lazy">
+                        <img src="images/site/crash-infinity.png" alt="Crash Games" loading="lazy">
                     </div>
                     <div class="game-card-content">
-                        <div class="game-card-icon">&#9876;</div>
-                        <h3 class="game-card-title">Virtual Sports</h3>
-                        <p class="game-card-desc">24/7 virtual football, cricket, greyhound racing &amp; more.</p>
-                        <span class="game-card-tag">Always running</span>
+                        <div class="game-card-icon">🚀</div>
+                        <h3 class="game-card-title">Crash Games</h3>
+                        <p class="game-card-desc">GreyJet, Crash Infinity, Aviator &mdash; multipliers up to 415x!</p>
+                        <span class="game-card-tag">Grey Gaming &middot; PopOK</span>
                     </div>
                 </div>
 
                 <div class="game-card" data-color="teal">
                     <div class="game-card-bg">
-                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=75" alt=""
-                            loading="lazy">
+                        <img src="images/site/578247.png" alt="Penalty Shootout" loading="lazy">
                     </div>
                     <div class="game-card-content">
-                        <div class="game-card-icon">&#9917;</div>
-                        <h3 class="game-card-title">Multi-Sports</h3>
-                        <p class="game-card-desc">Premier League, Wimbledon, NBA &amp; 20+ global sports.</p>
-                        <span class="game-card-tag">24/7 global action</span>
+                        <div class="game-card-icon">⚽</div>
+                        <h3 class="game-card-title">Quick Games</h3>
+                        <p class="game-card-desc">Penalty Shootout, Lucky 15 Balls, Horse Racing &amp; more.</p>
+                        <span class="game-card-tag">Instant results</span>
+                    </div>
+                </div>
+
+                <div class="game-card" data-color="blue">
+                    <div class="game-card-bg">
+                        <img src="images/site/khadda-market.png" alt="Khadda Market" loading="lazy">
+                    </div>
+                    <div class="game-card-content">
+                        <div class="game-card-icon">📊</div>
+                        <h3 class="game-card-title">Khadda Market</h3>
+                        <p class="game-card-desc">Big Khadda, bigger markets. Exclusive betting with fast results.</p>
+                        <span class="game-card-tag">Exclusive · Fast results</span>
                     </div>
                 </div>
 
                 <div class="game-card" data-color="gold">
                     <div class="game-card-bg">
-                        <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&q=75" alt=""
-                            loading="lazy">
+                        <img src="images/site/935738.png" alt="Horse Racing" loading="lazy">
                     </div>
                     <div class="game-card-content">
-                        <div class="game-card-icon">&#127873;</div>
-                        <h3 class="game-card-title">Bonus Games</h3>
-                        <p class="game-card-desc">Exclusive daily spins &amp; promotional games for members.</p>
-                        <span class="game-card-tag">Members only</span>
+                        <div class="game-card-icon">🏇</div>
+                        <h3 class="game-card-title">Horse Racing</h3>
+                        <p class="game-card-desc">Virtual &amp; live horse racing with real-time odds and instant payouts.</p>
+                        <span class="game-card-tag">Virtual &middot; Live</span>
                     </div>
                 </div>
+            </div>
+
+            <div class="games-more">
+                <p class="games-more-text">This is just the beginning &mdash; explore <strong>3,000+ games</strong> across 50+ providers including GreyJet, Crash Infinity, Khadda Market, Fortune Love &amp; hundreds more. New games added every week.</p>
+                <a href="javascript:void(0)" class="btn btn-gold btn-lg btn-glow" data-track="cta_signup_click" data-label="games-section" data-i18n="games_cta">Explore All 3,000+ Games</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PROMO BANNER CAROUSEL                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section section-promo-banners">
+        <div class="promo-banner-track">
+            <div class="promo-banner-scroll">
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-greyjet">
+                    <img src="images/site/greyjet.png" alt="GreyJet — The Ultimate Crash Game" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-crash">
+                    <img src="images/site/crash-infinity.png" alt="Crash Infinity — Bet Smart Cash Out Fast" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-vivo">
+                    <img src="images/site/vivo-gaming.png" alt="Vivo Gaming — Live at its Best" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-khadda">
+                    <img src="images/site/khadda-market.png" alt="Khadda Market — Big Markets Biggest Fun" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-zhandu">
+                    <img src="images/site/zhandu.png" alt="Zhandu — Anvio Gaming" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-fortune">
+                    <img src="images/site/fortune-love.png" alt="Fortune Love — Spin Into Love" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-battle">
+                    <img src="images/site/battle_hot.png" alt="Get 2% Instant Bonus on New ID" loading="lazy">
+                </a>
+                <!-- Duplicate set for infinite scroll -->
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-greyjet">
+                    <img src="images/site/greyjet.png" alt="GreyJet — The Ultimate Crash Game" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-crash">
+                    <img src="images/site/crash-infinity.png" alt="Crash Infinity — Bet Smart Cash Out Fast" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-vivo">
+                    <img src="images/site/vivo-gaming.png" alt="Vivo Gaming — Live at its Best" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-khadda">
+                    <img src="images/site/khadda-market.png" alt="Khadda Market — Big Markets Biggest Fun" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-zhandu">
+                    <img src="images/site/zhandu.png" alt="Zhandu — Anvio Gaming" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-fortune">
+                    <img src="images/site/fortune-love.png" alt="Fortune Love — Spin Into Love" loading="lazy">
+                </a>
+                <a href="javascript:void(0)" class="promo-banner-item" data-track="cta_whatsapp_click" data-label="promo-battle">
+                    <img src="images/site/battle_hot.png" alt="Get 2% Instant Bonus on New ID" loading="lazy">
+                </a>
             </div>
         </div>
     </section>
@@ -550,9 +775,9 @@
         </div>
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title section-title--white">Live Cricket. Every Ball. <span
+                <h2 class="section-title section-title--white" data-i18n="cricket_title">Live Cricket. Every Ball. <span
                         class="text-gradient-gold">Every Market.</span></h2>
-                <p class="section-subtitle">IPL. T20 World Cup. Test matches. Every game covered with the best odds in
+                <p class="section-subtitle" data-i18n="cricket_subtitle">IPL. T20 World Cup. Test matches. Every game covered with the best odds in
                     real time.</p>
             </div>
 
@@ -580,8 +805,8 @@
             <div class="cricket-grid">
                 <div class="cricket-card glass-panel cricket-card--featured">
                     <div class="cricket-card-badge"><span class="live-dot"></span> LIVE ACTION</div>
-                    <h3>Every Ball Counts</h3>
-                    <p>Follow ball-by-ball updates with live in-play markets. T20, ODI, Test &mdash; react as the game
+                    <h3 data-i18n="cricket_card1_title">Every Ball Counts</h3>
+                    <p data-i18n="cricket_card1_desc">Follow ball-by-ball updates with live in-play markets. T20, ODI, Test &mdash; react as the game
                         unfolds in real time.</p>
                     <div class="cricket-leagues">
                         <span class="league-tag">IPL</span>
@@ -598,15 +823,15 @@
                         <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=400&q=75" alt=""
                             loading="lazy">
                     </div>
-                    <h3>50+ Markets Per Match</h3>
-                    <p>Toss winner, top batsman, total runs per over, innings totals, session &amp; fall of wicket
+                    <h3 data-i18n="cricket_card2_title">50+ Markets Per Match</h3>
+                    <p data-i18n="cricket_card2_desc">Toss winner, top batsman, total runs per over, innings totals, session &amp; fall of wicket
                         markets.</p>
                 </div>
 
                 <div class="cricket-card glass-panel">
                     <h3>Premium Exchanges</h3>
                     <p>Your Kubercric ID unlocks Diamond, Lotus, Sky, World777, Fairbet, Lord's &amp; Tiger Exchange.</p>
-                    <p class="text-gold-sm">One ID. 7+ platforms.</p>
+                    <p class="text-gold-sm" data-i18n="cricket_card3_sub">One ID. 7+ platforms.</p>
                     <div class="exchange-logos">
                         <span class="exchange-pill">Diamond</span>
                         <span class="exchange-pill">Lotus</span>
@@ -617,9 +842,63 @@
                 </div>
             </div>
 
+            <!-- Cricket Betting Panel -->
+            <div class="cricket-bet-panel glass-panel">
+                <div class="cricket-bet-header">
+                    <span class="live-dot"></span> <strong>LIVE BET</strong> &mdash; India vs Australia
+                </div>
+                <div class="cricket-bet-markets">
+                    <div class="cricket-market">
+                        <span class="market-label">Match Winner</span>
+                        <div class="market-odds">
+                            <a href="javascript:void(0)" class="odd-btn odd-btn--back" data-track="cta_whatsapp_click" data-label="cricket-bet">
+                                <span class="odd-team">IND</span>
+                                <span class="odd-value">1.85</span>
+                            </a>
+                            <a href="javascript:void(0)" class="odd-btn odd-btn--back" data-track="cta_whatsapp_click" data-label="cricket-bet">
+                                <span class="odd-team">AUS</span>
+                                <span class="odd-value">2.10</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cricket-market">
+                        <span class="market-label">Top Batsman</span>
+                        <div class="market-odds">
+                            <a href="javascript:void(0)" class="odd-btn odd-btn--back" data-track="cta_whatsapp_click" data-label="cricket-bet">
+                                <span class="odd-team">Kohli</span>
+                                <span class="odd-value">3.50</span>
+                            </a>
+                            <a href="javascript:void(0)" class="odd-btn odd-btn--back" data-track="cta_whatsapp_click" data-label="cricket-bet">
+                                <span class="odd-team">Rohit</span>
+                                <span class="odd-value">4.20</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cricket-market">
+                        <span class="market-label">Next Over Runs</span>
+                        <div class="market-odds">
+                            <a href="javascript:void(0)" class="odd-btn odd-btn--over" data-track="cta_whatsapp_click" data-label="cricket-bet">
+                                <span class="odd-team">Over 6.5</span>
+                                <span class="odd-value">1.90</span>
+                            </a>
+                            <a href="javascript:void(0)" class="odd-btn odd-btn--under" data-track="cta_whatsapp_click" data-label="cricket-bet">
+                                <span class="odd-team">Under 6.5</span>
+                                <span class="odd-value">1.95</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-wa btn-md btn-pulse btn-glow" data-track="cta_whatsapp_click" data-label="cricket-bet-cta" style="width:100%;margin-top:12px;">
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" style="width:16px;height:16px;">
+                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z"/>
+                    </svg>
+                    Place Your Bet on WhatsApp
+                </a>
+            </div>
+
             <!-- Sports Row -->
             <div class="sports-row">
-                <h3 class="sports-row-title">Beyond Cricket &mdash; The World is Your Arena</h3>
+                <h3 class="sports-row-title" data-i18n="sports_beyond">Beyond Cricket &mdash; The World is Your Arena</h3>
                 <div class="sports-tags">
                     <div class="sport-tag glass-panel"><span>&#9917;</span> Football</div>
                     <div class="sport-tag glass-panel"><span>&#127934;</span> Tennis</div>
@@ -630,108 +909,13 @@
             </div>
 
             <div class="section-cta">
-                <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">Open All Sports
+                <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow" data-i18n="cricket_cta">Open All Sports
                     Markets</a>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- LIVE CASINO — IMMERSIVE                      -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="section section-casino" id="casino">
-        <div class="casino-bg-image">
-            <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=1920&q=80" alt="" loading="lazy">
-            <div class="casino-bg-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title section-title--white">Real Dealers. Real Tables. <span
-                        class="text-gradient-gold">Real Wins.</span></h2>
-                <p class="section-subtitle">Stream live from world-class studios straight to your phone &mdash; 24 hours
-                    a day.</p>
-            </div>
-
-            <!-- Casino Host Banner -->
-            <div class="casino-host-banner glass-panel">
-                <div class="casino-host-img-wrap">
-                    <img src="images/dealer_hot.png"
-                        alt="Live Casino Host" loading="lazy" class="casino-host-photo">
-                </div>
-                <div class="casino-host-content">
-                    <h3>Your Live Casino Awaits</h3>
-                    <p>Professional dealers streaming live in HD. Interactive tables with real-time chat. Experience the
-                        thrill of a real casino from anywhere.</p>
-                    <a href="https://wa.me/1234567890" class="btn btn-gold btn-sm">Join a Live Table</a>
-                </div>
-            </div>
-
-            <div class="casino-grid">
-                <div class="casino-card glass-panel">
-                    <div class="casino-card-visual">
-                        <img src="https://kubercric.com/assets/images/evolution.jpg" alt="Evolution Gaming"
-                            loading="lazy">
-                        <div class="casino-card-overlay"></div>
-                        <div class="casino-card-live"><span class="live-dot"></span> LIVE</div>
-                    </div>
-                    <div class="casino-card-body">
-                        <h3>Roulette</h3>
-                        <p class="casino-tagline">Evolution Gaming</p>
-                        <p>European &amp; American tables 24/7. Red/black, single numbers, combination plays. From
-                            &#8377;50.</p>
-                    </div>
-                </div>
-
-                <div class="casino-card glass-panel">
-                    <div class="casino-card-visual">
-                        <img src="https://kubercric.com/assets/images/ezugi.jpg" alt="Ezugi"
-                            loading="lazy">
-                        <div class="casino-card-overlay"></div>
-                        <div class="casino-card-live"><span class="live-dot"></span> LIVE</div>
-                    </div>
-                    <div class="casino-card-body">
-                        <h3>Baccarat</h3>
-                        <p class="casino-tagline">Ezugi Gaming</p>
-                        <p>Lowest house-edge. Player, Banker or Tie. Results in under 30 seconds.</p>
-                    </div>
-                </div>
-
-                <div class="casino-card glass-panel">
-                    <div class="casino-card-visual">
-                        <img src="https://kubercric.com/assets/images/superspade.jpg" alt="SuperSpade"
-                            loading="lazy">
-                        <div class="casino-card-overlay"></div>
-                        <div class="casino-card-live"><span class="live-dot"></span> LIVE</div>
-                    </div>
-                    <div class="casino-card-body">
-                        <h3>Teen Patti</h3>
-                        <p class="casino-tagline">SuperSpade Gaming</p>
-                        <p>Classic, Joker &amp; AK47 variants. Hindi-speaking dealers on select tables.</p>
-                    </div>
-                </div>
-
-                <div class="casino-card glass-panel">
-                    <div class="casino-card-visual">
-                        <img src="https://kubercric.com/assets/images/betgames.jpg" alt="Betgames"
-                            loading="lazy">
-                        <div class="casino-card-overlay"></div>
-                        <div class="casino-card-live"><span class="live-dot"></span> LIVE</div>
-                    </div>
-                    <div class="casino-card-body">
-                        <h3>Dragon Tiger</h3>
-                        <p class="casino-tagline">Betgames TV</p>
-                        <p>Fastest card game. One card each. Highest wins. Under 10 seconds.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="casino-cta-block glass-panel">
-                <p class="casino-cta-count"><span class="live-dot"></span> Over 200 live tables running right now</p>
-                <a href="https://wa.me/1234567890" class="btn btn-gold btn-lg btn-glow">Join a Live Table Now</a>
-                <p class="microcopy">Real dealers &middot; HD streaming &middot; Hindi support</p>
-            </div>
-        </div>
-    </section>
+    <!-- (Live Casino section removed) -->
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- FAST GAMES — NEON ARCADE STYLE               -->
@@ -744,153 +928,66 @@
         </div>
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Blink and You Could Win &mdash; <span class="text-neon-red">Fast Games</span>
+                <h2 class="section-title" data-i18n="fast_title">Blink and You Could Win &mdash; <span class="text-neon-red">Fast Games</span>
                 </h2>
-                <p class="section-subtitle">Instant-result games where every second counts.</p>
+                <p class="section-subtitle" data-i18n="fast_subtitle">Instant-result games where every second counts.</p>
             </div>
 
             <div class="fast-grid">
-                <div class="fast-card glass-panel">
-                    <div class="fast-card-header fast-header--crash">
-                        <div class="crash-graph">
-                            <svg viewBox="0 0 200 100" class="crash-svg">
-                                <path d="M0,100 Q50,90 80,60 T160,10" stroke="url(#crashGrad)" stroke-width="3"
-                                    fill="none" class="crash-line" />
-                                <defs>
-                                    <linearGradient id="crashGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                                        <stop offset="0%" stop-color="#00C853" />
-                                        <stop offset="100%" stop-color="#FF3B3B" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <span class="fast-multiplier">12.4x</span>
+                <div class="fast-card glass-panel fast-card--wide fast-card--crash-hero">
+                    <div class="fast-card-header fast-header--crash-merged">
+                        <canvas id="crashCanvas" class="crash-canvas"></canvas>
+                        <div class="crash-hero-multiplier">
+                            <span class="crash-multi-value" id="crashMultiVal">1.00x</span>
                         </div>
                     </div>
-                    <h3>Crash X</h3>
-                    <p>Watch the multiplier rise. Cash out before it crashes. 10x, 50x, even 100x returns.</p>
-                    <span class="fast-tag">15&ndash;60s rounds</span>
-                </div>
-
-                <div class="fast-card glass-panel">
-                    <div class="fast-card-header fast-header--vortex">
-                        <div class="vortex-animation">
-                            <div class="vortex-ring vortex-ring--1"></div>
-                            <div class="vortex-ring vortex-ring--2"></div>
-                            <div class="vortex-ring vortex-ring--3"></div>
+                    <div class="crash-bet-panel">
+                        <!-- Bet amount selector -->
+                        <div class="crash-bet-left">
+                            <div class="crash-bet-label">Bet Amount</div>
+                            <div class="crash-bet-input-row">
+                                <span class="crash-currency">&#8377;</span>
+                                <input type="text" class="crash-bet-input" id="crashBetInput" value="500" readonly>
+                            </div>
+                            <div class="crash-bet-presets">
+                                <button class="crash-preset" data-amt="100">&#8377;100</button>
+                                <button class="crash-preset" data-amt="500">&#8377;500</button>
+                                <button class="crash-preset crash-preset--active" data-amt="1000">&#8377;1K</button>
+                                <button class="crash-preset" data-amt="5000">&#8377;5K</button>
+                            </div>
+                        </div>
+                        <!-- Auto cashout -->
+                        <div class="crash-bet-mid">
+                            <div class="crash-bet-label">Auto Cashout</div>
+                            <div class="crash-bet-input-row">
+                                <input type="text" class="crash-bet-input crash-cashout-input" value="10.00" readonly>
+                                <span class="crash-x-label">x</span>
+                            </div>
+                            <div class="crash-bet-hint">Win: <span class="crash-potential-win" id="crashPotWin">&#8377;5,000</span></div>
+                        </div>
+                        <!-- Place bet button -->
+                        <div class="crash-bet-right">
+                            <a href="javascript:void(0)" class="crash-place-bet-btn" data-track="cta_whatsapp_click" data-label="crash-bet">
+                                <span class="crash-btn-main">PLACE BET</span>
+                                <span class="crash-btn-sub">&#8377;500 &rarr; Win &#8377;5,000</span>
+                            </a>
+                            <div class="crash-bet-players"><span class="live-dot"></span> 1,247 playing now</div>
                         </div>
                     </div>
-                    <h3>Vortex</h3>
-                    <p>Hypnotic circular crash variant. Watch your entry orbit outward. Hold longer for bigger wins.</p>
-                    <span class="fast-tag">High multiplier</span>
                 </div>
 
-                <div class="fast-card glass-panel">
-                    <div class="fast-card-header fast-header--ace">
-                        <div class="ace-cards">
-                            <div class="ace-card ace-card--back"></div>
-                            <div class="ace-card ace-card--front">A<span>&#9824;</span></div>
-                        </div>
-                    </div>
-                    <h3>Ace</h3>
-                    <p>Draw a card, beat the dealer. Rapid-fire rounds every 10 seconds.</p>
-                    <span class="fast-tag">10s rounds</span>
-                </div>
-
-                <div class="fast-card glass-panel">
-                    <div class="fast-card-header fast-header--aero">
-                        <div class="aero-plane">&#9992;</div>
-                        <div class="aero-trail"></div>
-                    </div>
-                    <h3>Aero</h3>
-                    <p>Watch an aircraft climb. Cash out before it disappears. Supports auto-cashout.</p>
-                    <span class="fast-tag">Auto-cashout</span>
-                </div>
-
-                <div class="fast-card glass-panel fast-card--wide">
-                    <div class="fast-card-header fast-header--mines">
-                        <div class="mines-grid-visual">
-                            <span class="mine-cell mine-revealed mine-safe">&#128142;</span>
-                            <span class="mine-cell mine-revealed mine-safe">&#128142;</span>
-                            <span class="mine-cell mine-revealed mine-bomb">&#128163;</span>
-                            <span class="mine-cell mine-hidden">?</span>
-                            <span class="mine-cell mine-revealed mine-safe">&#128142;</span>
-                            <span class="mine-cell mine-hidden">?</span>
-                            <span class="mine-cell mine-hidden">?</span>
-                            <span class="mine-cell mine-revealed mine-safe">&#128142;</span>
-                            <span class="mine-cell mine-hidden">?</span>
-                            <span class="mine-cell mine-revealed mine-safe">&#128142;</span>
-                            <span class="mine-cell mine-hidden">?</span>
-                            <span class="mine-cell mine-hidden">?</span>
-                        </div>
-                    </div>
-                    <h3>Mines</h3>
-                    <p>Grid of tiles hides mines. Pick safe tiles to multiply. More mines = higher multiplier. Risk vs
-                        intuition.</p>
-                    <span class="fast-tag">Customizable risk</span>
-                </div>
+                <!-- Game images removed -->
             </div>
 
             <div class="section-cta">
-                <p class="cta-headline">60 Seconds to Your Next Win</p>
-                <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">Play Fast Games Now</a>
-                <p class="microcopy">From &#8377;10/round &middot; New games weekly &middot; Provably fair</p>
+                <p class="cta-headline" data-i18n="fast_cta_headline">60 Seconds to Your Next Win</p>
+                <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow" data-i18n="fast_cta">Play Fast Games Now</a>
+                <p class="microcopy" data-i18n="fast_microcopy">From &#8377;10/round &middot; New games weekly &middot; Provably fair</p>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- PLAYER BATTLE                                -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="section section-battle" id="battle">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">It's Not Luck &mdash; <span class="text-neon-purple">It's Skill.</span></h2>
-                <p class="section-subtitle">Challenge real opponents. Head-to-head. Your knowledge wins.</p>
-            </div>
-
-            <div class="battle-arena glass-panel">
-                <div class="battle-player battle-player--left">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt=""
-                        class="battle-avatar" loading="lazy">
-                    <span class="battle-player-name">Player 1</span>
-                    <span class="battle-player-stake">&#8377;500</span>
-                </div>
-                <div class="battle-center">
-                    <div class="battle-vs-badge">VS</div>
-                    <div class="battle-pot">Prize Pool: &#8377;1,000</div>
-                </div>
-                <div class="battle-player battle-player--right">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt=""
-                        class="battle-avatar" loading="lazy">
-                    <span class="battle-player-name">Player 2</span>
-                    <span class="battle-player-stake">&#8377;500</span>
-                </div>
-            </div>
-
-            <div class="battle-features">
-                <div class="battle-feature glass-panel">
-                    <div class="battle-feature-icon">&#127942;</div>
-                    <h4>Zero House Edge</h4>
-                    <p>100% fair, player vs player</p>
-                </div>
-                <div class="battle-feature glass-panel">
-                    <div class="battle-feature-icon">&#9889;</div>
-                    <h4>5&ndash;10 Min Matches</h4>
-                    <p>Quick, intense rounds</p>
-                </div>
-                <div class="battle-feature glass-panel">
-                    <div class="battle-feature-icon">&#128170;</div>
-                    <h4>Skill Wins</h4>
-                    <p>No luck, pure strategy</p>
-                </div>
-            </div>
-
-            <div class="section-cta">
-                <a href="https://wa.me/1234567890" class="btn btn-gold btn-lg btn-glow">Enter a Player Battle</a>
-                <p class="microcopy">24/7 &middot; From &#8377;100 &middot; Instant pairing</p>
-            </div>
-        </div>
-    </section>
+    <!-- (Player Battle section removed) -->
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- BONUS / OFFERS — GLAMOUR STYLE               -->
@@ -898,166 +995,65 @@
     <section class="section section-offers" id="offers">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Your Welcome Bonus <span class="text-gradient-gold">Is Waiting</span></h2>
-                <p class="section-subtitle">New members get rewarded from the very first deposit.</p>
+                <h2 class="section-title" data-i18n="offers_title">Your Welcome Bonus <span class="text-gradient-gold">Is Waiting</span></h2>
+                <p class="section-subtitle" data-i18n="offers_subtitle">New members get rewarded from the very first deposit.</p>
             </div>
 
-            <div class="offers-showcase">
-                <div class="offers-visual">
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=85" alt="Bonus Offer"
-                        loading="lazy" class="offers-host-img">
-                    <div class="offers-visual-glow"></div>
-                </div>
-                <div class="offers-content">
-                    <div class="offer-cards">
-                        <div class="offer-card glass-panel offer-card--primary">
-                            <div class="offer-card-shine"></div>
-                            <div class="offer-card-value">50</div>
-                            <div class="offer-card-label">Free Spins</div>
-                            <p>On Live Casino &mdash; Evoplay &amp; Egypt Gods</p>
-                        </div>
-                        <div class="offer-card glass-panel offer-card--secondary">
-                            <div class="offer-card-shine"></div>
-                            <div class="offer-card-value">10%</div>
-                            <div class="offer-card-label">Live Casino Bonus</div>
-                            <p>Rolling 25x &middot; Max &#8377;1,500</p>
-                        </div>
-                        <div class="offer-card glass-panel offer-card--tertiary">
-                            <div class="offer-card-shine"></div>
-                            <div class="offer-card-value">2%</div>
-                            <div class="offer-card-label">Grey Gaming Bonus</div>
-                            <p>Extra on every deposit</p>
-                        </div>
-                    </div>
+            <!-- Offer Banner -->
+            <a href="javascript:void(0)" class="offer-banner-hero" data-track="cta_whatsapp_click" data-label="offer-banner">
+                <img src="images/site/offer1.jpeg" alt="Get 50 Free Spins & 10% Bonus on Live Casino" loading="lazy">
+            </a>
 
-                    <div class="offer-cta-block">
-                        <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">
-                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                                fill="currentColor">
-                                <path
-                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z" />
-                            </svg>
-                            Claim Your Bonus Now
-                        </a>
-                        <p class="offer-disclaimer">New customers only. Min &#8377;500. 18+. T&amp;Cs apply.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- HOW TO VIDEO                                  -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="section section-how-video" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">See How It Works <span class="text-gradient-gold">In 60 Seconds</span></h2>
-                <p class="section-subtitle">Watch our quick guide &mdash; register, deposit, and start playing in under a minute.</p>
-            </div>
-
-            <div class="how-video-layout">
-                <!-- Video Player -->
-                <div class="how-video-player glass-panel">
-                    <div class="video-container" id="howToVideoContainer">
-                        <img src="images/hero_bg.png" alt="How to get started with Kubercric" class="video-poster" id="videoPoster">
-                        <div class="video-play-btn" id="videoPlayBtn">
-                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="40" cy="40" r="38" fill="rgba(0,0,0,0.6)" stroke="#F5C518" stroke-width="3"/>
-                                <polygon points="32,24 58,40 32,56" fill="#F5C518"/>
-                            </svg>
-                            <span class="video-play-text">Watch How It Works</span>
-                        </div>
-                        <video id="howToVideo" preload="none" playsinline style="display:none;width:100%;height:100%;object-fit:cover;border-radius:16px;">
-                            <source src="" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Steps alongside video -->
-                <div class="how-steps-compact">
-                    <div class="how-step-item">
-                        <div class="how-step-num">1</div>
-                        <div class="how-step-info">
-                            <h4>Register or Message Us</h4>
-                            <p>Sign up directly on kubercric.com or click WhatsApp &mdash; our team creates your ID in seconds.</p>
-                        </div>
-                    </div>
-                    <div class="how-step-item">
-                        <div class="how-step-num">2</div>
-                        <div class="how-step-info">
-                            <h4>Deposit Funds</h4>
-                            <p>Deposit via UPI, GPay, PhonePe or Crypto (Min &#8377;500). Funds appear instantly.</p>
-                        </div>
-                    </div>
-                    <div class="how-step-item">
-                        <div class="how-step-num">3</div>
-                        <div class="how-step-info">
-                            <h4>Play &amp; Win</h4>
-                            <p>Access 7+ premium exchanges, 3000+ games &mdash; cricket, casino, slots &amp; more!</p>
-                        </div>
-                    </div>
-                    <div class="how-step-item how-step-item--highlight">
-                        <div class="how-step-num">4</div>
-                        <div class="how-step-info">
-                            <h4>Withdraw Instantly</h4>
-                            <p>Winnings back to your bank 24/7. Fast withdrawals, no hidden fees.</p>
-                        </div>
-                    </div>
+            <!-- HERO CARD — Rolling 25x -->
+            <div class="bonus-hero-card glass-panel">
+                <div class="offer-card-shine"></div>
+                <div class="bonus-hero-inner">
+                    <div class="bonus-hero-badge">&#9889; LOWEST IN INDUSTRY</div>
+                    <div class="bonus-hero-value">25x</div>
+                    <div class="bonus-hero-label">Rolling Wagering Requirement</div>
+                    <p class="bonus-hero-desc">One of the lowest rolling requirements in Indian online gaming. Your winnings convert to real cash faster &mdash; no endless wagering traps.</p>
                 </div>
             </div>
 
-            <div class="section-cta">
+            <!-- SUPPORTING BONUS CARDS -->
+            <div class="bonus-grid">
+                <div class="bonus-mini-card glass-panel">
+                    <div class="offer-card-shine"></div>
+                    <div class="bonus-mini-icon">&#127920;</div>
+                    <div class="bonus-mini-value">50 <span>Free Spins</span></div>
+                    <p>Live Casino &mdash; Evoplay &amp; Egypt Gods</p>
+                </div>
+                <div class="bonus-mini-card glass-panel">
+                    <div class="offer-card-shine"></div>
+                    <div class="bonus-mini-icon">&#128176;</div>
+                    <div class="bonus-mini-value">10% <span>Casino Bonus</span></div>
+                    <p>On your first deposit into Live Casino</p>
+                </div>
+                <div class="bonus-mini-card glass-panel">
+                    <div class="offer-card-shine"></div>
+                    <div class="bonus-mini-icon">&#128640;</div>
+                    <div class="bonus-mini-value">2% <span>New ID Bonus</span></div>
+                    <p>Extra bonus on every single deposit</p>
+                </div>
+            </div>
+
+            <div class="offer-cta-block" style="text-align:center; margin-top:36px;">
                 <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse btn-glow">
-                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                        fill="currentColor">
                         <path
                             d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z" />
                     </svg>
-                    Get My ID on WhatsApp &mdash; It's Free
+                    <span data-i18n="offer_claim_cta">Claim Your Bonus Now</span>
                 </a>
-                <p class="microcopy">No app download &middot; Works on all devices</p>
+                <p class="offer-disclaimer" data-i18n="offer_disclaimer2">New customers only. Min &#8377;500. 18+. T&amp;Cs apply.</p>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- TRUST & SAFETY                               -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section class="section section-trust" id="trust">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Your Security Is <span class="text-gradient-gold">Our Priority</span></h2>
-                <p class="section-subtitle">Full transparency, verified systems, and 24/7 human support.</p>
-            </div>
-            <div class="trust-grid">
-                <div class="trust-card glass-panel">
-                    <div class="trust-card-icon">&#128737;</div>
-                    <h3>Licensed &amp; Regulated</h3>
-                    <p>Cura&ccedil;ao eGaming licensed &mdash; internationally recognized authority.</p>
-                </div>
-                <div class="trust-card glass-panel">
-                    <div class="trust-card-icon">&#127760;</div>
-                    <h3>Multi-Language</h3>
-                    <p>Full support in English &amp; Hindi. Regional WhatsApp agents 24/7.</p>
-                </div>
-                <div class="trust-card glass-panel">
-                    <div class="trust-card-icon">&#128274;</div>
-                    <h3>Bank-Grade Security</h3>
-                    <p>256-bit SSL encryption. UPI, GPay, PhonePe, Crypto. Zero hidden fees.</p>
-                </div>
-                <div class="trust-card glass-panel">
-                    <div class="trust-card-icon">&#128154;</div>
-                    <h3>Responsible Play</h3>
-                    <p>Session reminders, self-exclusion, deposit limits on request.</p>
-                </div>
-                <div class="trust-card glass-panel">
-                    <div class="trust-card-icon">&#128172;</div>
-                    <h3>24/7 Human Support</h3>
-                    <p>Real people on WhatsApp. Under 2 min response. English &amp; Hindi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- (Video section moved next to offer) -->
+    <!-- (Signup Form Preview section removed) -->
+
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- WHY KUBERCRIC                                -->
@@ -1065,17 +1061,15 @@
     <section class="section section-why">
         <div class="container container-md">
             <div class="section-header">
-                <h2 class="section-title">Why Choose <span class="text-gradient-gold">Kubercric?</span></h2>
+                <h2 class="section-title" data-i18n="why_choose">Why Choose <span class="text-gradient-gold">Kubercric?</span></h2>
             </div>
             <ul class="feature-list">
-                <li><strong>No Hidden Bookmaker Fees:</strong> Keep 100% of your winnings.</li>
-                <li><strong>24/7 Lightning Fast Withdrawals:</strong> Get paid directly to your bank, UPI, or wallet
-                    anytime.</li>
-                <li><strong>Massive Live Casino:</strong> Real-dealer roulette, teen patti, blackjack &amp; thousands of
-                    slots.</li>
+                <li data-i18n="why_withdrawal_item"><strong>24/7 Instant Withdrawal:</strong> Get paid directly to your bank, UPI, or wallet anytime. No delays.</li>
+                <li data-i18n="why_support_item"><strong>1-to-1 Customer Support:</strong> Dedicated WhatsApp agent, under 2 minutes response.</li>
+                <li><strong>3000+ Games:</strong> GreyJet, Khadda Market, Crash Infinity, Fortune Love, Live Casino &amp; more.</li>
                 <li><strong>7+ Premium Exchanges:</strong> Diamond, Lotus, Sky, World777, Fairbet, Lord's, Tiger &amp; more.</li>
-                <li><strong>3000+ Games:</strong> Premium slots, live tables, sports markets.</li>
-                <li><strong>Instant WhatsApp Support:</strong> Real person, under 2 minutes.</li>
+                <li><strong>50+ Game Providers:</strong> Evolution, Grey Gaming, PopOK, Vivo, Anvio, Amigo &amp; more.</li>
+                <li><strong>50 Free Spins + 10% Bonus:</strong> On your first deposit. Evoplay Egypt Gods &amp; Live Casino.</li>
             </ul>
         </div>
     </section>
@@ -1086,145 +1080,66 @@
     <section class="section section-faq" id="faq">
         <div class="container container-md">
             <div class="section-header">
-                <h2 class="section-title">Frequently Asked <span class="text-gradient-gold">Questions</span></h2>
+                <h2 class="section-title" data-i18n="faq_title">Frequently Asked <span class="text-gradient-gold">Questions</span></h2>
             </div>
             <div class="faq-list">
                 <details class="faq-item glass-panel">
-                    <summary class="faq-question">What is the minimum deposit / withdrawal?</summary>
-                    <p class="faq-answer">Minimum deposit is &#8377;500. Withdrawals are unlimited, processed instantly
+                    <summary class="faq-question" data-i18n="faq_q1">What is the minimum deposit / withdrawal?</summary>
+                    <p class="faq-answer" data-i18n="faq_a1">Minimum deposit is &#8377;500. Withdrawals are unlimited, processed instantly
                         24/7 via UPI, bank transfer, or crypto.</p>
                 </details>
                 <details class="faq-item glass-panel">
-                    <summary class="faq-question">Which payment methods are accepted?</summary>
+                    <summary class="faq-question" data-i18n="faq_q2">Which payment methods are accepted?</summary>
                     <p class="faq-answer">UPI (GPay, PhonePe, Paytm), IMPS Bank Transfer, Net Banking, credit/debit
                         cards, and select crypto networks.</p>
                 </details>
                 <details class="faq-item glass-panel">
-                    <summary class="faq-question">Is my personal information safe?</summary>
-                    <p class="faq-answer">Absolutely. Minimal info needed for your anonymous ID. 256-bit SSL encryption
+                    <summary class="faq-question" data-i18n="faq_q3">Is my personal information safe?</summary>
+                    <p class="faq-answer" data-i18n="faq_a3">Absolutely. Minimal info needed for your anonymous ID. 256-bit SSL encryption
                         protects all data.</p>
                 </details>
                 <details class="faq-item glass-panel">
-                    <summary class="faq-question">How fast do I get my ID?</summary>
-                    <p class="faq-answer">Under 60 seconds after deposit confirmation. WhatsApp us and we handle
+                    <summary class="faq-question" data-i18n="faq_q4">How fast do I get my ID?</summary>
+                    <p class="faq-answer" data-i18n="faq_a4">Under 60 seconds after deposit confirmation. WhatsApp us and we handle
                         everything instantly.</p>
                 </details>
                 <details class="faq-item glass-panel">
-                    <summary class="faq-question">Can I access multiple exchanges with one ID?</summary>
+                    <summary class="faq-question" data-i18n="faq_q5">Can I access multiple exchanges with one ID?</summary>
                     <p class="faq-answer">Yes! One Kubercric ID unlocks 7+ exchanges including Diamond, Lotus, Sky, World777, Fairbet, Lord's &amp; Tiger.
                         No re-registration needed.</p>
                 </details>
                 <details class="faq-item glass-panel">
-                    <summary class="faq-question">What if I need help?</summary>
-                    <p class="faq-answer">24/7 WhatsApp support. Under 2 min response. English &amp; Hindi available.
+                    <summary class="faq-question" data-i18n="faq_q6">What if I need help?</summary>
+                    <p class="faq-answer" data-i18n="faq_a6">24/7 WhatsApp support. Under 2 min response. English &amp; Hindi available.
                     </p>
                 </details>
             </div>
             <div class="section-cta">
-                <h3 class="cta-headline gold">Have more questions? Our team is live right now.</h3>
-                <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse">Chat With Live Support</a>
+                <h3 class="cta-headline gold" data-i18n="faq_cta_headline">Have more questions? Our team is live right now.</h3>
+                <a href="https://wa.me/1234567890" class="btn btn-wa btn-lg btn-pulse" data-i18n="faq_cta">Chat With Live Support</a>
             </div>
         </div>
     </section>
 
+    <!-- (Trust seals merged into trust-strip section above) -->
+
     <!-- ═══════════════════════════════════════════ -->
-    <!-- TRUST SEALS BAR                               -->
+    <!-- SIGNUP CODE MODAL                           -->
     <!-- ═══════════════════════════════════════════ -->
-    <section class="section section-trust-seals">
-        <div class="container">
-            <div class="trust-seals-row">
-                <div class="trust-seal trust-seal--cga">
-                    <div class="cga-seal">
-                        <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Outer shield shape -->
-                            <path d="M60 2 L112 22 L112 70 C112 100 90 128 60 138 C30 128 8 100 8 70 L8 22 Z"
-                                fill="#395173" stroke="#4a6a8f" stroke-width="2" />
-                            <!-- Inner shield -->
-                            <path d="M60 10 L104 27 L104 70 C104 95 85 120 60 130 C35 120 16 95 16 70 L16 27 Z"
-                                fill="#2a3f5c" stroke="#4a6a8f" stroke-width="1" />
-                            <!-- Gold ring -->
-                            <circle cx="60" cy="62" r="32" fill="none" stroke="#f5c518" stroke-width="2.5" />
-                            <circle cx="60" cy="62" r="28" fill="none" stroke="#d4a817" stroke-width="0.8" />
-                            <!-- CGA text -->
-                            <text x="60" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="18"
-                                font-weight="bold" fill="#f5c518" letter-spacing="3">CGA</text>
-                            <!-- Curacao text curved along bottom of ring -->
-                            <text x="60" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="7"
-                                fill="#8fa8c8" letter-spacing="1.5">CURAÇAO</text>
-                            <!-- Star decorations -->
-                            <polygon points="60,22 62,28 68,28 63,32 65,38 60,34 55,38 57,32 52,28 58,28"
-                                fill="#f5c518" />
-                            <!-- Checkmark in circle at bottom -->
-                            <circle cx="60" cy="100" r="10" fill="#00c853" opacity="0.9" />
-                            <path d="M55 100 L58 103 L66 95" fill="none" stroke="white" stroke-width="2.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <!-- Bottom banner -->
-                            <rect x="22" y="112" width="76" height="14" rx="3" fill="#f5c518" opacity="0.9" />
-                            <text x="60" y="122" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5"
-                                font-weight="bold" fill="#1a1a2e" letter-spacing="0.8">LICENSED</text>
-                        </svg>
-                    </div>
-                    <span class="seal-label">Curaçao Gaming</span>
-                    <span class="seal-sub">Authority Regulated</span>
-                </div>
-                <div class="trust-seal">
-                    <div class="seal-shield seal-shield--green">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="11" width="18" height="10" rx="2" />
-                            <path d="M7 11V7a5 5 0 0110 0v4" />
-                            <circle cx="12" cy="16" r="1.5" />
-                        </svg>
-                    </div>
-                    <span class="seal-label">256-bit SSL</span>
-                    <span class="seal-sub">Bank-Grade Encryption</span>
-                </div>
-                <div class="trust-seal">
-                    <div class="seal-shield seal-shield--blue">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M12 7v5l3 3" />
-                            <path d="M3.6 15h1.8M18.6 15h1.8M3.6 9h1.8M18.6 9h1.8" />
-                        </svg>
-                    </div>
-                    <span class="seal-label">RNG Certified</span>
-                    <span class="seal-sub">Fair Play Guaranteed</span>
-                </div>
-                <div class="trust-seal">
-                    <div class="seal-shield seal-shield--purple">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-                        </svg>
-                    </div>
-                    <span class="seal-label">50,000+</span>
-                    <span class="seal-sub">Active Players Daily</span>
-                </div>
-                <div class="trust-seal">
-                    <div class="seal-shield seal-shield--red">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" /><text x="12"
-                                y="15" text-anchor="middle" font-size="8" font-weight="bold" fill="currentColor"
-                                stroke="none">18+</text>
-                        </svg>
-                    </div>
-                    <span class="seal-label">Responsible</span>
-                    <span class="seal-sub">Gaming Certified</span>
-                </div>
-                <div class="trust-seal">
-                    <div class="seal-shield seal-shield--cyan">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path
-                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-                            <circle cx="12" cy="12" r="3" />
-                        </svg>
-                    </div>
-                    <span class="seal-label">24/7 Uptime</span>
-                    <span class="seal-sub">99.9% Guaranteed</span>
-                </div>
-            </div>
+    <div class="modal-overlay" id="signup-code-modal" style="display:none">
+        <div class="modal glass-panel">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h3 data-i18n="modal_title">What is Signup Code?</h3>
+            <p data-i18n="modal_desc">The signup code is a referral code required during registration. It links your account to our platform so you receive the <strong>100% welcome bonus</strong>.</p>
+            <p><strong data-i18n="modal_how">How to get it:</strong></p>
+            <ol>
+                <li data-i18n="modal_step1">Message us on WhatsApp</li>
+                <li data-i18n="modal_step2">We'll send you the code instantly</li>
+                <li data-i18n="modal_step3">Paste it in the form and you're done!</li>
+            </ol>
+            <a href="javascript:void(0)" class="btn btn-wa btn-md btn-block" data-track="cta_whatsapp_click" data-label="modal" style="margin-top:20px" data-i18n="modal_cta">Get Your Signup Code Now</a>
         </div>
-    </section>
+    </div>
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- FINAL CTA — CINEMATIC                        -->
@@ -1236,21 +1151,18 @@
             <div class="final-cta-overlay"></div>
         </div>
         <div class="container text-center" style="position:relative;z-index:2;">
-            <h2 class="final-cta-title">Ready to Start <span class="text-gradient-gold">Winning?</span></h2>
-            <p class="final-cta-subtitle">Join thousands of players on India's most trusted gaming platform.</p>
+            <h2 class="final-cta-title"><span data-i18n="final_title">Your ID. Your Game.</span> <span class="text-gradient-gold" data-i18n="ready_now">Ready Now.</span></h2>
+            <p class="final-cta-subtitle" data-i18n="join_50k">Join 50,000+ players. Get 100% bonus on your first deposit. Start winning today.</p>
             <div class="final-cta-offers">
                 <span class="final-offer-pill">&#127942; 10% Live Casino Bonus</span>
-                <span class="final-offer-pill">&#127920; 50 Free Spins</span>
-                <span class="final-offer-pill">&#9889; Instant Withdrawals</span>
+                <span class="final-offer-pill">&#127920; <span data-i18n="final_pill2">50 Free Spins</span></span>
+                <span class="final-offer-pill">&#9889; <span data-i18n="final_pill3">Instant Withdrawals</span></span>
             </div>
-            <a href="https://wa.me/1234567890" class="btn btn-wa btn-xl btn-pulse btn-glow">
-                <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                    <path
-                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1z" />
-                </svg>
-                Get Your ID Now &mdash; It's Free
-            </a>
-            <p class="microcopy">No app download &middot; Works everywhere &middot; 18+ &middot; T&amp;Cs apply</p>
+            <div class="dual-cta dual-cta--center" style="margin-top:28px;">
+                <a href="javascript:void(0)" class="btn btn-wa btn-lg btn-pulse btn-glow" data-track="cta_whatsapp_click" data-label="final" data-i18n="final_get_id">Get Free ID on WhatsApp</a>
+                <a href="javascript:void(0)" class="btn btn-gold btn-lg btn-glow" data-track="cta_signup_click" data-label="final" data-i18n="final_register">Create Free ID Online</a>
+            </div>
+            <p class="microcopy" style="margin-top:16px;" data-i18n="final_microcopy">100% bonus &middot; Instant withdrawals &middot; 24/7 support</p>
         </div>
     </section>
 
@@ -1259,24 +1171,14 @@
     <!-- ═══════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-section">
-                <h4 class="footer-heading">Secure &amp; Instant Payments</h4>
-                <div class="payment-row">
-                    <span class="pay-pill">UPI</span><span class="pay-pill">GPay</span><span
-                        class="pay-pill">PhonePe</span><span class="pay-pill">Paytm</span><span class="pay-pill">Bank
-                        Transfer</span><span class="pay-pill">Visa</span><span class="pay-pill">Mastercard</span><span
-                        class="pay-pill">Crypto</span>
-                </div>
-            </div>
-            <div class="footer-divider"></div>
             <div class="footer-section footer-responsible">
                 <span class="age-badge">18+</span>
-                <span class="responsible-text">Play Responsibly</span>
+                <span class="responsible-text" data-i18n="footer_responsible">Play Responsibly</span>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-links">
-                <a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Responsible Gaming</a><a
-                    href="#">Contact Us</a><a href="#">FAQ</a>
+                <a href="#" data-i18n="footer_terms">Terms &amp; Conditions</a><a href="#" data-i18n="footer_privacy">Privacy Policy</a><a href="#" data-i18n="footer_responsible_gaming">Responsible Gaming</a><a
+                    href="#" data-i18n="footer_contact">Contact Us</a><a href="#" data-i18n="footer_faq">FAQ</a>
             </div>
             <div class="footer-contact">
                 <p>&#128241; WhatsApp: +91-XXXXXXXXXX &middot; 24/7 &middot; Under 2 min response</p>
@@ -1292,19 +1194,62 @@
         </div>
     </footer>
 
-    <!-- STICKY MOBILE CTA -->
-    <div class="sticky-mobile-cta" id="stickyCta">
-        <div class="sticky-cta-inner">
-            <div class="sticky-cta-text"><span class="sticky-icon">&#9889;</span> 50 Free Spins Active</div>
-            <a href="https://wa.me/1234567890" class="btn btn-wa btn-sm sticky-btn">Get ID Now</a>
-        </div>
-    </div>
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="javascript:void(0)" class="wa-float" id="wa-float" data-track="cta_whatsapp_click" data-label="floating">
+        <span class="wa-float-text" data-i18n="need_help">Get Free ID</span>
+        <span class="wa-float-icon">
+            <svg viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        </span>
+    </a>
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- JAVASCRIPT                                   -->
     <!-- ═══════════════════════════════════════════ -->
     <script>
         (function () {
+            'use strict';
+
+            /* ═══════════════════════════════════════
+               CONFIG (from index2)
+               ═══════════════════════════════════════ */
+            var CONFIG = {
+                WHATSAPP_NUMBER: '1234567890',
+                SIGNUP_URL_BASE: 'https://kubercric.com/signup',
+                REF_PARAM: 'ref',
+                REF_CODE: 'KUBERCRIC100',
+                OFFER_TIMER_HOURS: 2,
+                SOCIAL_PROOF_COUNT: 2847
+            };
+
+            var SIGNUP_URL = CONFIG.SIGNUP_URL_BASE + '?' + CONFIG.REF_PARAM + '=' + CONFIG.REF_CODE;
+            var WA_URL = 'https://wa.me/' + CONFIG.WHATSAPP_NUMBER + '?text=' + encodeURIComponent('Hi! I want my Kubercric betting ID. Please help me set it up.');
+
+            /* ═══════════════════════════════════════
+               TRACKING (from index2)
+               ═══════════════════════════════════════ */
+            window.dataLayer = window.dataLayer || [];
+            function track(event, label) {
+                var payload = { event: event, label: label || '', timestamp: Date.now() };
+                window.dataLayer.push(payload);
+                console.log('[KC Track]', event, label || '');
+            }
+
+            /* ═══════════════════════════════════════
+               CTA ROUTING (from index2)
+               ═══════════════════════════════════════ */
+            document.addEventListener('click', function(e) {
+                var btn = e.target.closest('[data-track]');
+                if (!btn) return;
+                var eventName = btn.getAttribute('data-track');
+                var label = btn.getAttribute('data-label') || '';
+                track(eventName, label);
+                if (eventName === 'cta_signup_click') {
+                    window.open(SIGNUP_URL, '_blank');
+                } else if (eventName === 'cta_whatsapp_click') {
+                    window.open(WA_URL, '_blank');
+                }
+            });
+
             /* ── PARTICLES BACKGROUND ── */
             var canvas = document.getElementById('particles');
             var ctx = canvas.getContext('2d');
@@ -1376,22 +1321,63 @@
             }
             animateParticles();
 
-            /* ── SCROLL BEHAVIORS ── */
-            var stickyCta = document.getElementById('stickyCta');
+            /* ── SCROLL BEHAVIORS (Header) ── */
             var header = document.getElementById('header');
-
-            function onScroll() {
-                var y = window.scrollY;
-                if (y > 200) stickyCta.classList.add('visible');
-                else stickyCta.classList.remove('visible');
-                if (y > 60) header.classList.add('header--scrolled');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 60) header.classList.add('header--scrolled');
                 else header.classList.remove('header--scrolled');
+            }, { passive: true });
+
+            /* ── STEPS PROGRESS LINE ANIMATION ── */
+            (function() {
+                var fill = document.getElementById('stepsProgressFill');
+                if (!fill) return;
+                var animated = false;
+                var obs = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting && !animated) {
+                        animated = true;
+                        setTimeout(function() { fill.style.width = '33%'; }, 400);
+                        setTimeout(function() { fill.style.width = '66%'; }, 800);
+                        setTimeout(function() { fill.style.width = '100%'; }, 1200);
+                    }
+                }, { threshold: 0.5 });
+                obs.observe(fill.closest('.path-steps-flow'));
+            })();
+
+            /* ── HOW-TO VIDEO PLAYER ── */
+            var videoPlayBtn = document.getElementById('videoPlayBtn');
+            var videoPoster = document.getElementById('videoPoster');
+            var howToVideo = document.getElementById('howToVideo');
+            if (videoPlayBtn && howToVideo) {
+                videoPlayBtn.addEventListener('click', function() {
+                    var videoSrc = howToVideo.querySelector('source').getAttribute('src');
+                    if (videoSrc) {
+                        videoPoster.style.display = 'none';
+                        videoPlayBtn.style.display = 'none';
+                        howToVideo.style.display = 'block';
+                        howToVideo.play();
+                    } else {
+                        var waCta = document.querySelector('.btn-wa');
+                        if (waCta) waCta.click();
+                    }
+                });
             }
 
-            var ticking = false;
-            window.addEventListener('scroll', function () {
-                if (!ticking) { requestAnimationFrame(function () { onScroll(); ticking = false; }); ticking = true; }
-            });
+            /* ── FLOATING WHATSAPP BUTTON (show after scrolling past hero) ── */
+            var waFloat = document.getElementById('wa-float');
+            var heroEl = document.getElementById('hero');
+            if (waFloat && heroEl) {
+                var floatObs = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(e) {
+                        if (!e.isIntersecting) {
+                            waFloat.classList.add('wa-float--visible');
+                        } else {
+                            waFloat.classList.remove('wa-float--visible');
+                        }
+                    });
+                }, { threshold: 0 });
+                floatObs.observe(heroEl);
+            }
 
             /* ── SMOOTH SCROLL ── */
             document.querySelectorAll('a[href^="#"]').forEach(function (a) {
@@ -1411,13 +1397,49 @@
             /* ── SCROLL REVEAL ── */
             var obs = new IntersectionObserver(function (entries) {
                 entries.forEach(function (e) {
-                    if (e.isIntersecting) e.target.classList.add('animate-in');
+                    if (e.isIntersecting) {
+                        e.target.classList.add('animate-in');
+                        obs.unobserve(e.target);
+                    }
                 });
             }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-            document.querySelectorAll('.game-card,.casino-card,.fast-card,.trust-card,.offer-card,.step-card,.battle-feature,.cricket-card,.glass-panel').forEach(function (el) {
+            document.querySelectorAll('.game-card,.casino-card,.fast-card,.trust-card,.offer-card,.step-card,.battle-feature,.cricket-card,.glass-panel,.path-card,.explain-item').forEach(function (el) {
                 obs.observe(el);
             });
+
+            /* ── SIGNUP CODE MODAL (from index2) ── */
+            var modal = document.getElementById('signup-code-modal');
+            var modalOpen = document.getElementById('signup-code-help');
+            var modalClose = document.getElementById('modal-close');
+            if (modalOpen) {
+                modalOpen.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.style.display = 'flex';
+                });
+            }
+            if (modalClose) {
+                modalClose.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                });
+            }
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) modal.style.display = 'none';
+                });
+            }
+
+            /* ── SCROLL DEPTH TRACKING (from index2) ── */
+            var scrollMilestones = { 25: false, 50: false, 75: false, 100: false };
+            window.addEventListener('scroll', function() {
+                var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                [25, 50, 75, 100].forEach(function(m) {
+                    if (scrollPct >= m && !scrollMilestones[m]) {
+                        scrollMilestones[m] = true;
+                        track('scroll_depth', m + '%');
+                    }
+                });
+            }, { passive: true });
 
             /* ── ANIMATED COUNTER (SCOREBOARD) ── */
             var scoreEl = document.querySelector('.team-score');
@@ -1481,6 +1503,35 @@
                 }
             })();
 
+            /* ── SOCIAL PROOF TICKER ── */
+            (function() {
+                var messages = [
+                    'Rahul from Delhi just withdrew \u20B912,500',
+                    'Amit from Mumbai just won \u20B98,200 on Teen Patti',
+                    'Sanjay from Jaipur just created a new ID',
+                    'Priya from Bangalore won \u20B915,000 on Crash',
+                    'Deepak from Pune just deposited via UPI',
+                    'Vikram from Chennai withdrew \u20B922,000',
+                    'Ravi from Hyderabad just won \u20B96,500 on Roulette',
+                    'Neha from Kolkata created a new betting ID',
+                    'Ajay from Lucknow won \u20B911,200 on GreyJet',
+                    'Suresh from Ahmedabad just withdrew \u20B918,000'
+                ];
+                var tickerText = document.getElementById('tickerText');
+                if (!tickerText) return;
+                var idx = 0;
+                setInterval(function() {
+                    tickerText.style.opacity = '0';
+                    tickerText.style.transform = 'translateY(8px)';
+                    setTimeout(function() {
+                        idx = (idx + 1) % messages.length;
+                        tickerText.textContent = messages[idx];
+                        tickerText.style.opacity = '1';
+                        tickerText.style.transform = 'translateY(0)';
+                    }, 400);
+                }, 3500);
+            })();
+
             /* ── CRASH MULTIPLIER COUNTER ── */
             var mult = document.querySelector('.fast-multiplier');
             if (mult) {
@@ -1514,7 +1565,366 @@
                     }
                 });
             }
+
         })();
+    </script>
+
+    <!-- Self-contained translation dictionary -->
+    <script src="translations.js"></script>
+
+    <!-- Language Translator — Self-contained i18n engine -->
+    <script>
+    (function() {
+        var LANG_LABELS = {
+            'en': 'EN', 'hi': 'हि', 'ta': 'த', 'te': 'తె',
+            'bn': 'বা', 'mr': 'म', 'gu': 'ગુ', 'kn': 'ಕ',
+            'ml': 'മ', 'pa': 'ਪ'
+        };
+        var STORAGE_KEY = 'kubercric_lang';
+        var englishCache = {};
+
+        function detectLanguage() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var urlLang = urlParams.get('lang') || urlParams.get('hl') || urlParams.get('locale');
+            if (urlLang) {
+                var s = urlLang.substring(0, 2).toLowerCase();
+                if (LANG_LABELS[s]) return s;
+            }
+            var saved = localStorage.getItem(STORAGE_KEY);
+            if (saved && LANG_LABELS[saved]) return saved;
+            var bl = (navigator.language || navigator.userLanguage || 'en').substring(0, 2).toLowerCase();
+            if (LANG_LABELS[bl]) return bl;
+            if (navigator.languages) {
+                for (var i = 0; i < navigator.languages.length; i++) {
+                    var l = navigator.languages[i].substring(0, 2).toLowerCase();
+                    if (LANG_LABELS[l]) return l;
+                }
+            }
+            return 'en';
+        }
+
+        var currentLang = detectLanguage();
+
+        // Cache original English innerHTML from all [data-i18n] elements
+        function cacheEnglish() {
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (!englishCache[key]) englishCache[key] = el.innerHTML;
+            });
+        }
+
+        // Apply translations
+        function applyLanguage(lang) {
+            var T = window.KC_TRANSLATIONS;
+            if (!T) return;
+            var dict = (lang === 'en') ? null : T[lang];
+
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (lang === 'en') {
+                    if (englishCache[key]) el.innerHTML = englishCache[key];
+                } else if (dict && dict[key]) {
+                    el.innerHTML = dict[key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        // Language selector UI
+        var langBtn = document.getElementById('langBtn');
+        var langDropdown = document.getElementById('langDropdown');
+        var langCurrent = document.getElementById('langCurrent');
+
+        if (langBtn && langDropdown) {
+            langBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langDropdown.classList.toggle('lang-dropdown--open');
+            });
+            document.addEventListener('click', function() {
+                langDropdown.classList.remove('lang-dropdown--open');
+            });
+            langDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var option = e.target.closest('.lang-option');
+                if (!option) return;
+                var lang = option.getAttribute('data-lang');
+                if (lang === currentLang) { langDropdown.classList.remove('lang-dropdown--open'); return; }
+
+                langDropdown.querySelectorAll('.lang-option').forEach(function(opt) {
+                    opt.classList.remove('lang-option--active');
+                });
+                option.classList.add('lang-option--active');
+                currentLang = lang;
+                localStorage.setItem(STORAGE_KEY, lang);
+                langCurrent.textContent = LANG_LABELS[lang];
+                applyLanguage(lang);
+                langDropdown.classList.remove('lang-dropdown--open');
+                if (typeof track === 'function') track('language_change', lang);
+            });
+        }
+
+        // Set initial label
+        if (langCurrent) langCurrent.textContent = LANG_LABELS[currentLang];
+
+        // Cache English, then auto-apply detected language
+        cacheEnglish();
+        if (currentLang !== 'en') {
+            applyLanguage(currentLang);
+            document.querySelectorAll('.lang-option').forEach(function(opt) {
+                opt.classList.remove('lang-option--active');
+                if (opt.getAttribute('data-lang') === currentLang) opt.classList.add('lang-option--active');
+            });
+        }
+    })();
+    </script>
+
+    <!-- Crash Bet Panel Interactivity -->
+    <script>
+    (function() {
+        var presets = document.querySelectorAll('.crash-preset');
+        var betInput = document.getElementById('crashBetInput');
+        var potWin = document.getElementById('crashPotWin');
+        var cashoutVal = 10;
+        if (!presets.length) return;
+
+        function updateWin(amt) {
+            var win = amt * cashoutVal;
+            if (win >= 1000) {
+                potWin.textContent = '\u20B9' + (win/1000).toFixed(0) + ',000';
+            } else {
+                potWin.textContent = '\u20B9' + win.toLocaleString('en-IN');
+            }
+            var subEl = document.querySelector('.crash-btn-sub');
+            if (subEl) subEl.textContent = '\u20B9' + amt + ' \u2192 Win ' + potWin.textContent;
+        }
+
+        presets.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                presets.forEach(function(b) { b.classList.remove('crash-preset--active'); });
+                btn.classList.add('crash-preset--active');
+                var amt = parseInt(btn.getAttribute('data-amt'));
+                betInput.value = amt >= 1000 ? (amt/1000) + ',000' : amt;
+                updateWin(amt);
+            });
+        });
+    })();
+    </script>
+
+    <!-- Crash Game Plane Animation -->
+    <script>
+    (function() {
+        var canvas = document.getElementById('crashCanvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var multiEl = document.getElementById('crashMultiVal');
+        var dpr = window.devicePixelRatio || 1;
+        var W = 0, H = 0;
+        var started = false;
+
+        function resize() {
+            var parent = canvas.parentElement;
+            var w = parent.clientWidth || parent.offsetWidth;
+            var h = parent.clientHeight || parent.offsetHeight;
+            if (w === 0 || h === 0) return;
+            W = w;
+            H = h;
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            canvas.style.width = W + 'px';
+            canvas.style.height = H + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+        window.addEventListener('resize', resize);
+
+        // Curve: exponential-ish from bottom-left to top-right
+        // t goes 0→1, returns {x, y} in canvas coords
+        function getPoint(t) {
+            var x = t * W * 0.88 + W * 0.06;
+            // Exponential curve: starts slow, accelerates upward
+            var curve = Math.pow(t, 2.2);
+            var y = H * 0.88 - curve * H * 0.78;
+            return { x: x, y: y };
+        }
+
+        // Multiplier: 1.00x at t=0, accelerates to 415x at t=1
+        function getMultiplier(t) {
+            // Exponential growth: slow start, fast end
+            return 1 + (415 - 1) * Math.pow(t, 3.5);
+        }
+
+        // Color based on multiplier
+        function getColor(t) {
+            if (t < 0.4) return '#00C853';       // green
+            if (t < 0.7) return '#F5C518';        // gold
+            return '#FF3B3B';                      // red
+        }
+
+        var progress = 0;
+        var duration = 5000; // 5 seconds
+        var startTime = null;
+        var loopPause = 2000;
+        var pausing = false;
+
+        function drawGrid() {
+            ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+            ctx.lineWidth = 1;
+            // Horizontal lines
+            for (var i = 1; i < 5; i++) {
+                var gy = H * i / 5;
+                ctx.beginPath();
+                ctx.moveTo(0, gy);
+                ctx.lineTo(W, gy);
+                ctx.stroke();
+            }
+            // Vertical lines
+            for (var j = 1; j < 8; j++) {
+                var gx = W * j / 8;
+                ctx.beginPath();
+                ctx.moveTo(gx, 0);
+                ctx.lineTo(gx, H);
+                ctx.stroke();
+            }
+        }
+
+        function drawFrame(t) {
+            ctx.clearRect(0, 0, W, H);
+            drawGrid();
+
+            if (t <= 0) return;
+
+            // Draw filled area under curve
+            ctx.beginPath();
+            var p0 = getPoint(0);
+            ctx.moveTo(p0.x, H);
+            ctx.lineTo(p0.x, p0.y);
+            var steps = Math.floor(t * 80);
+            for (var i = 1; i <= steps; i++) {
+                var st = i / 80;
+                var sp = getPoint(st);
+                ctx.lineTo(sp.x, sp.y);
+            }
+            var lastP = getPoint(t);
+            ctx.lineTo(lastP.x, lastP.y);
+            ctx.lineTo(lastP.x, H);
+            ctx.closePath();
+            var fillGrad = ctx.createLinearGradient(0, 0, 0, H);
+            fillGrad.addColorStop(0, 'rgba(0,200,83,0.12)');
+            fillGrad.addColorStop(1, 'rgba(0,200,83,0)');
+            ctx.fillStyle = fillGrad;
+            ctx.fill();
+
+            // Draw curve line
+            ctx.beginPath();
+            ctx.moveTo(p0.x, p0.y);
+            for (var i2 = 1; i2 <= steps; i2++) {
+                var st2 = i2 / 80;
+                var sp2 = getPoint(st2);
+                ctx.lineTo(sp2.x, sp2.y);
+            }
+            ctx.lineTo(lastP.x, lastP.y);
+            var lineGrad = ctx.createLinearGradient(p0.x, 0, lastP.x, 0);
+            lineGrad.addColorStop(0, '#00C853');
+            lineGrad.addColorStop(0.5, '#F5C518');
+            lineGrad.addColorStop(1, '#FF3B3B');
+            ctx.strokeStyle = lineGrad;
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.stroke();
+
+            // Draw plane at current position
+            var planeSize = Math.min(W, H) * 0.18;
+            var tPrev = Math.max(0, t - 0.02);
+            var pPrev = getPoint(tPrev);
+            var dx = lastP.x - pPrev.x;
+            var dy = lastP.y - pPrev.y;
+            // atan2 gives angle of travel direction; emoji ✈️ faces right by default
+            var angle = Math.atan2(dy, dx);
+
+            ctx.save();
+            ctx.translate(lastP.x, lastP.y);
+            ctx.rotate(angle + 0.35);
+            ctx.shadowColor = 'rgba(245,197,24,0.6)';
+            ctx.shadowBlur = 18;
+            ctx.font = planeSize + 'px serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('\u2708\uFE0F', 0, 0);
+            ctx.restore();
+
+            // Trail particles behind plane
+            for (var tp = 0; tp < 5; tp++) {
+                var trailT = Math.max(0, t - (tp + 1) * 0.015);
+                var trailP = getPoint(trailT);
+                var alpha = (1 - tp / 5) * 0.4;
+                ctx.beginPath();
+                ctx.arc(trailP.x, trailP.y, 2.5 - tp * 0.4, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(245,197,24,' + alpha + ')';
+                ctx.fill();
+            }
+
+            // Update multiplier text
+            var multi = getMultiplier(t);
+            var color = getColor(t);
+            if (multi < 10) {
+                multiEl.textContent = multi.toFixed(2) + 'x';
+            } else if (multi < 100) {
+                multiEl.textContent = multi.toFixed(1) + 'x';
+            } else {
+                multiEl.textContent = Math.floor(multi) + 'x';
+            }
+            multiEl.style.color = color;
+        }
+
+        function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            progress = Math.min(elapsed / duration, 1);
+
+            // Ease-in-out for smooth feel
+            var eased = progress < 0.5
+                ? 2 * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            drawFrame(eased);
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                // Pause then restart
+                setTimeout(function() {
+                    startTime = null;
+                    progress = 0;
+                    requestAnimationFrame(animate);
+                }, loopPause);
+            }
+        }
+
+        // Start animation
+        function tryStart() {
+            if (started) return;
+            resize();
+            if (W === 0 || H === 0) return;
+            started = true;
+            requestAnimationFrame(animate);
+        }
+
+        // Use IntersectionObserver if available, plus scroll fallback
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) tryStart();
+            }, { threshold: 0.2 });
+            observer.observe(canvas.parentElement);
+        }
+
+        // Fallback: check on scroll & on load
+        function scrollCheck() {
+            if (started) return;
+            var rect = canvas.parentElement.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) tryStart();
+        }
+        window.addEventListener('scroll', scrollCheck, { passive: true });
+        window.addEventListener('load', function() { setTimeout(scrollCheck, 200); });
+    })();
     </script>
 
 </body>
